@@ -1,0 +1,1722 @@
+{
+	"categorys": {
+		"game-daan": [
+			{
+				"category": "game-daan",
+				"css": {
+					"backgroundSize": "170.4vw 139.86666666666667vw",
+					"backgroundPositionX": "-34.4vw",
+					"backgroundPositionY": "-74.13333333333333vw",
+					"width": "46vw",
+					"height": "12.266666666666666vw"
+				},
+				"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+				"rawUrl": "game/daan/作答结果按钮.png",
+				"rect": [
+					258,
+					556,
+					345,
+					92
+				],
+				"width": 345,
+				"height": 92,
+				"name": "作答结果按钮.png"
+			},
+			{
+				"category": "game-daan",
+				"css": {
+					"backgroundSize": "170.4vw 139.86666666666667vw",
+					"backgroundPositionX": "-159.60000000000002vw",
+					"backgroundPositionY": "-18.133333333333333vw",
+					"width": "4.533333333333333vw",
+					"height": "3.2vw"
+				},
+				"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+				"rawUrl": "game/daan/对.png",
+				"rect": [
+					1197,
+					136,
+					34,
+					24
+				],
+				"width": 34,
+				"height": 24,
+				"name": "对.png"
+			},
+			{
+				"category": "game-daan",
+				"css": {
+					"backgroundSize": "170.4vw 139.86666666666667vw",
+					"backgroundPositionX": "0vw",
+					"backgroundPositionY": "-105.60000000000001vw",
+					"width": "35.333333333333336vw",
+					"height": "15.466666666666667vw"
+				},
+				"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+				"rawUrl": "game/daan/返回.png",
+				"rect": [
+					0,
+					792,
+					265,
+					116
+				],
+				"width": 265,
+				"height": 116,
+				"name": "返回.png"
+			},
+			{
+				"category": "game-daan",
+				"css": {
+					"backgroundSize": "170.4vw 139.86666666666667vw",
+					"backgroundPositionX": "-38vw",
+					"backgroundPositionY": "-105.60000000000001vw",
+					"width": "35.333333333333336vw",
+					"height": "15.466666666666667vw"
+				},
+				"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+				"rawUrl": "game/daan/重新开始.png",
+				"rect": [
+					285,
+					792,
+					265,
+					116
+				],
+				"width": 265,
+				"height": 116,
+				"name": "重新开始.png"
+			},
+			{
+				"category": "game-daan",
+				"css": {
+					"backgroundSize": "170.4vw 139.86666666666667vw",
+					"backgroundPositionX": "-159.60000000000002vw",
+					"backgroundPositionY": "-24vw",
+					"width": "3.733333333333334vw",
+					"height": "3.733333333333334vw"
+				},
+				"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+				"rawUrl": "game/daan/错.png",
+				"rect": [
+					1197,
+					180,
+					28,
+					28
+				],
+				"width": 28,
+				"height": 28,
+				"name": "错.png"
+			},
+			{
+				"category": "game-daan",
+				"css": {
+					"backgroundSize": "170.4vw 139.86666666666667vw",
+					"backgroundPositionX": "-83.06666666666666vw",
+					"backgroundPositionY": "-74.13333333333333vw",
+					"width": "46vw",
+					"height": "12.266666666666666vw"
+				},
+				"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+				"rawUrl": "game/daan/题目答案按钮.png",
+				"rect": [
+					623,
+					556,
+					345,
+					92
+				],
+				"width": 345,
+				"height": 92,
+				"name": "题目答案按钮.png"
+			},
+			{
+				"category": "game-daan",
+				"css": {
+					"backgroundSize": "131.20000000000002vw 2vw",
+					"backgroundPositionX": "0vw",
+					"backgroundPositionY": "0vw",
+					"width": "131.20000000000002vw",
+					"height": "2vw"
+				},
+				"imageName": "d5017ab8-d2d5-4da1-a16d-2c9792a0478c",
+				"rawUrl": "game/daan/分割线.png",
+				"rect": [
+					0,
+					0,
+					984,
+					15
+				],
+				"width": 984,
+				"height": 15,
+				"name": "分割线.png"
+			},
+			{
+				"category": "game-daan",
+				"css": {
+					"backgroundSize": "170.4vw 118.53333333333333vw",
+					"backgroundPositionX": "0vw",
+					"backgroundPositionY": "0vw",
+					"width": "170.4vw",
+					"height": "118.53333333333333vw"
+				},
+				"imageName": "a5c9a15a-4d08-4846-9506-947370f4c1e5",
+				"rawUrl": "game/daan/背景.png",
+				"rect": [
+					0,
+					0,
+					1278,
+					889
+				],
+				"width": 1278,
+				"height": 889,
+				"name": "背景.png"
+			}
+		],
+		"game-p1": [
+			{
+				"category": "game-p1",
+				"css": {
+					"backgroundSize": "170.4vw 139.86666666666667vw",
+					"backgroundPositionX": "0vw",
+					"backgroundPositionY": "0vw",
+					"width": "36.53333333333333vw",
+					"height": "43.333333333333336vw"
+				},
+				"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+				"rawUrl": "game/p1/冰冻.png",
+				"rect": [
+					0,
+					0,
+					274,
+					325
+				],
+				"width": 274,
+				"height": 325,
+				"name": "冰冻.png"
+			},
+			{
+				"category": "game-p1",
+				"css": {
+					"backgroundSize": "170.4vw 139.86666666666667vw",
+					"backgroundPositionX": "-78.13333333333333vw",
+					"backgroundPositionY": "-28.133333333333333vw",
+					"width": "31.066666666666663vw",
+					"height": "29.86666666666667vw"
+				},
+				"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+				"rawUrl": "game/p1/锤晕.png",
+				"rect": [
+					586,
+					211,
+					233,
+					224
+				],
+				"width": 233,
+				"height": 224,
+				"name": "锤晕.png"
+			}
+		],
+		"game-jieguo": [
+			{
+				"category": "game-jieguo",
+				"css": {
+					"backgroundSize": "170.4vw 139.86666666666667vw",
+					"backgroundPositionX": "-135.06666666666666vw",
+					"backgroundPositionY": "-18.133333333333333vw",
+					"width": "21.866666666666667vw",
+					"height": "21.73333333333333vw"
+				},
+				"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+				"rawUrl": "game/jieguo/布丁头像.png",
+				"rect": [
+					1013,
+					136,
+					164,
+					163
+				],
+				"width": 164,
+				"height": 163,
+				"name": "布丁头像.png"
+			},
+			{
+				"category": "game-jieguo",
+				"css": {
+					"backgroundSize": "170.4vw 139.86666666666667vw",
+					"backgroundPositionX": "-135.06666666666666vw",
+					"backgroundPositionY": "-42.53333333333333vw",
+					"width": "21.73333333333333vw",
+					"height": "21.73333333333333vw"
+				},
+				"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+				"rawUrl": "game/jieguo/豆豆头像.png",
+				"rect": [
+					1013,
+					319,
+					163,
+					163
+				],
+				"width": 163,
+				"height": 163,
+				"name": "豆豆头像.png"
+			},
+			{
+				"category": "game-jieguo",
+				"css": {
+					"backgroundSize": "170.4vw 139.86666666666667vw",
+					"backgroundPositionX": "-76vw",
+					"backgroundPositionY": "-105.60000000000001vw",
+					"width": "35.333333333333336vw",
+					"height": "15.466666666666667vw"
+				},
+				"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+				"rawUrl": "game/jieguo/重新开始按钮.png",
+				"rect": [
+					570,
+					792,
+					265,
+					116
+				],
+				"width": 265,
+				"height": 116,
+				"name": "重新开始按钮.png"
+			},
+			{
+				"category": "game-jieguo",
+				"css": {
+					"backgroundSize": "170.4vw 139.86666666666667vw",
+					"backgroundPositionX": "-135.06666666666666vw",
+					"backgroundPositionY": "0vw",
+					"width": "35.333333333333336vw",
+					"height": "15.466666666666667vw"
+				},
+				"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+				"rawUrl": "game/jieguo/题目答案按钮.png",
+				"rect": [
+					1013,
+					0,
+					265,
+					116
+				],
+				"width": 265,
+				"height": 116,
+				"name": "题目答案按钮.png"
+			},
+			{
+				"category": "game-jieguo",
+				"css": {
+					"backgroundSize": "74.26666666666667vw 102.53333333333335vw",
+					"backgroundPositionX": "0vw",
+					"backgroundPositionY": "0vw",
+					"width": "74.26666666666667vw",
+					"height": "102.53333333333335vw"
+				},
+				"imageName": "d0ebe4a2-72ea-44bd-ab4e-a27ee2b93eef",
+				"rawUrl": "game/jieguo/失败.png",
+				"rect": [
+					0,
+					0,
+					557,
+					769
+				],
+				"width": 557,
+				"height": 769,
+				"name": "失败.png"
+			},
+			{
+				"category": "game-jieguo",
+				"css": {
+					"backgroundSize": "74.53333333333333vw 108.13333333333333vw",
+					"backgroundPositionX": "0vw",
+					"backgroundPositionY": "0vw",
+					"width": "74.53333333333333vw",
+					"height": "108.13333333333333vw"
+				},
+				"imageName": "de24423d-288d-40dc-9424-4197a66a8e69",
+				"rawUrl": "game/jieguo/平局.png",
+				"rect": [
+					0,
+					0,
+					559,
+					811
+				],
+				"width": 559,
+				"height": 811,
+				"name": "平局.png"
+			},
+			{
+				"category": "game-jieguo",
+				"css": {
+					"backgroundSize": "74.53333333333333vw 108.13333333333333vw",
+					"backgroundPositionX": "0vw",
+					"backgroundPositionY": "0vw",
+					"width": "74.53333333333333vw",
+					"height": "108.13333333333333vw"
+				},
+				"imageName": "6cf30bdd-7e06-47fe-b3e6-1e75c401d086",
+				"rawUrl": "game/jieguo/胜利.png",
+				"rect": [
+					0,
+					0,
+					559,
+					811
+				],
+				"width": 559,
+				"height": 811,
+				"name": "胜利.png"
+			}
+		],
+		"game-panel": [
+			{
+				"category": "game-panel",
+				"css": {
+					"backgroundSize": "170.4vw 139.86666666666667vw",
+					"backgroundPositionX": "-135.06666666666666vw",
+					"backgroundPositionY": "-97.6vw",
+					"width": "19.333333333333332vw",
+					"height": "16.133333333333333vw"
+				},
+				"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+				"rawUrl": "game/panel/对.png",
+				"rect": [
+					1013,
+					732,
+					145,
+					121
+				],
+				"width": 145,
+				"height": 121,
+				"name": "对.png"
+			},
+			{
+				"category": "game-panel",
+				"css": {
+					"backgroundSize": "170.4vw 139.86666666666667vw",
+					"backgroundPositionX": "-111.86666666666667vw",
+					"backgroundPositionY": "-28.133333333333333vw",
+					"width": "19.333333333333332vw",
+					"height": "16.133333333333333vw"
+				},
+				"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+				"rawUrl": "game/panel/对选中.png",
+				"rect": [
+					839,
+					211,
+					145,
+					121
+				],
+				"width": 145,
+				"height": 121,
+				"name": "对选中.png"
+			},
+			{
+				"category": "game-panel",
+				"css": {
+					"backgroundSize": "170.4vw 139.86666666666667vw",
+					"backgroundPositionX": "0vw",
+					"backgroundPositionY": "-123.73333333333333vw",
+					"width": "19.333333333333332vw",
+					"height": "16.133333333333333vw"
+				},
+				"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+				"rawUrl": "game/panel/错.png",
+				"rect": [
+					0,
+					928,
+					145,
+					121
+				],
+				"width": 145,
+				"height": 121,
+				"name": "错.png"
+			},
+			{
+				"category": "game-panel",
+				"css": {
+					"backgroundSize": "170.4vw 139.86666666666667vw",
+					"backgroundPositionX": "-22vw",
+					"backgroundPositionY": "-123.73333333333333vw",
+					"width": "19.333333333333332vw",
+					"height": "16.133333333333333vw"
+				},
+				"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+				"rawUrl": "game/panel/错选中.png",
+				"rect": [
+					165,
+					928,
+					145,
+					121
+				],
+				"width": 145,
+				"height": 121,
+				"name": "错选中.png"
+			},
+			{
+				"category": "game-panel",
+				"css": {
+					"backgroundSize": "69.19999999999999vw 144vw",
+					"backgroundPositionX": "0vw",
+					"backgroundPositionY": "0vw",
+					"width": "69.19999999999999vw",
+					"height": "144vw"
+				},
+				"imageName": "3a613106-7498-49ef-a88b-4bfd281658c6",
+				"rawUrl": "game/panel/右侧背景.png",
+				"rect": [
+					0,
+					0,
+					519,
+					1080
+				],
+				"width": 519,
+				"height": 1080,
+				"name": "右侧背景.png"
+			},
+			{
+				"category": "game-panel",
+				"css": {
+					"backgroundSize": "68.66666666666667vw 144vw",
+					"backgroundPositionX": "0vw",
+					"backgroundPositionY": "0vw",
+					"width": "68.66666666666667vw",
+					"height": "144vw"
+				},
+				"imageName": "c3f724d3-0a28-4e09-99a2-3333162ce1d2",
+				"rawUrl": "game/panel/左侧背景.png",
+				"rect": [
+					0,
+					0,
+					515,
+					1080
+				],
+				"width": 515,
+				"height": 1080,
+				"name": "左侧背景.png"
+			},
+			{
+				"category": "game-panel",
+				"css": {
+					"backgroundSize": "395.7333333333333vw 351.73333333333335vw",
+					"backgroundPositionX": "-189.2vw",
+					"backgroundPositionY": "0vw",
+					"width": "64.93333333333334vw",
+					"height": "47.06666666666667vw"
+				},
+				"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+				"rawUrl": "game/panel/对话框对.png",
+				"rect": [
+					1419,
+					0,
+					487,
+					353
+				],
+				"width": 487,
+				"height": 353,
+				"name": "对话框对.png"
+			},
+			{
+				"category": "game-panel",
+				"css": {
+					"backgroundSize": "395.7333333333333vw 351.73333333333335vw",
+					"backgroundPositionX": "-189.2vw",
+					"backgroundPositionY": "-104.53333333333332vw",
+					"width": "59.86666666666667vw",
+					"height": "44.53333333333334vw"
+				},
+				"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+				"rawUrl": "game/panel/对话框错.png",
+				"rect": [
+					1419,
+					784,
+					449,
+					334
+				],
+				"width": 449,
+				"height": 334,
+				"name": "对话框错.png"
+			}
+		],
+		"game-p2": [
+			{
+				"category": "game-p2",
+				"css": {
+					"backgroundSize": "170.4vw 139.86666666666667vw",
+					"backgroundPositionX": "-39.2vw",
+					"backgroundPositionY": "0vw",
+					"width": "36.266666666666666vw",
+					"height": "43.2vw"
+				},
+				"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+				"rawUrl": "game/p2/冰冻.png",
+				"rect": [
+					294,
+					0,
+					272,
+					324
+				],
+				"width": 272,
+				"height": 324,
+				"name": "冰冻.png"
+			},
+			{
+				"category": "game-p2",
+				"css": {
+					"backgroundSize": "170.4vw 139.86666666666667vw",
+					"backgroundPositionX": "0vw",
+					"backgroundPositionY": "-74.13333333333333vw",
+					"width": "31.733333333333334vw",
+					"height": "28.799999999999997vw"
+				},
+				"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+				"rawUrl": "game/p2/锤晕.png",
+				"rect": [
+					0,
+					556,
+					238,
+					216
+				],
+				"width": 238,
+				"height": 216,
+				"name": "锤晕.png"
+			}
+		],
+		"game-paodao": [
+			{
+				"category": "game-paodao",
+				"css": {
+					"backgroundSize": "170.4vw 139.86666666666667vw",
+					"backgroundPositionX": "-157.06666666666666vw",
+					"backgroundPositionY": "-97.6vw",
+					"width": "12.4vw",
+					"height": "11.733333333333333vw"
+				},
+				"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+				"rawUrl": "game/paodao/人物打勾对.png",
+				"rect": [
+					1178,
+					732,
+					93,
+					88
+				],
+				"width": 93,
+				"height": 88,
+				"name": "人物打勾对.png"
+			},
+			{
+				"category": "game-paodao",
+				"css": {
+					"backgroundSize": "170.4vw 139.86666666666667vw",
+					"backgroundPositionX": "-52.26666666666666vw",
+					"backgroundPositionY": "-89.06666666666668vw",
+					"width": "12.4vw",
+					"height": "11.733333333333333vw"
+				},
+				"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+				"rawUrl": "game/paodao/人物打勾错.png",
+				"rect": [
+					392,
+					668,
+					93,
+					88
+				],
+				"width": 93,
+				"height": 88,
+				"name": "人物打勾错.png"
+			},
+			{
+				"category": "game-paodao",
+				"css": {
+					"backgroundSize": "170.4vw 139.86666666666667vw",
+					"backgroundPositionX": "0vw",
+					"backgroundPositionY": "-46vw",
+					"width": "54.266666666666666vw",
+					"height": "25.466666666666665vw"
+				},
+				"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+				"rawUrl": "game/paodao/右锤子.png",
+				"rect": [
+					0,
+					345,
+					407,
+					191
+				],
+				"width": 407,
+				"height": 191,
+				"name": "右锤子.png"
+			},
+			{
+				"category": "game-paodao",
+				"css": {
+					"backgroundSize": "170.4vw 139.86666666666667vw",
+					"backgroundPositionX": "-78.13333333333333vw",
+					"backgroundPositionY": "0vw",
+					"width": "54.266666666666666vw",
+					"height": "25.466666666666665vw"
+				},
+				"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+				"rawUrl": "game/paodao/左锤子.png",
+				"rect": [
+					586,
+					0,
+					407,
+					191
+				],
+				"width": 407,
+				"height": 191,
+				"name": "左锤子.png"
+			},
+			{
+				"category": "game-paodao",
+				"css": {
+					"backgroundSize": "170.4vw 139.86666666666667vw",
+					"backgroundPositionX": "-56.93333333333334vw",
+					"backgroundPositionY": "-46vw",
+					"width": "13.866666666666665vw",
+					"height": "14.933333333333335vw"
+				},
+				"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+				"rawUrl": "game/paodao/超时.png",
+				"rect": [
+					427,
+					345,
+					104,
+					112
+				],
+				"width": 104,
+				"height": 112,
+				"name": "超时.png"
+			},
+			{
+				"category": "game-paodao",
+				"css": {
+					"backgroundSize": "118.26666666666668vw 38.800000000000004vw",
+					"backgroundPositionX": "0vw",
+					"backgroundPositionY": "0vw",
+					"width": "118.26666666666668vw",
+					"height": "38.800000000000004vw"
+				},
+				"imageName": "c73bd20e-670d-44d5-a385-b823f9027dac",
+				"rawUrl": "game/paodao/终点线.png",
+				"rect": [
+					0,
+					0,
+					887,
+					291
+				],
+				"width": 887,
+				"height": 291,
+				"name": "终点线.png"
+			},
+			{
+				"category": "game-paodao",
+				"css": {
+					"backgroundSize": "116.93333333333334vw 12.133333333333333vw",
+					"backgroundPositionX": "0vw",
+					"backgroundPositionY": "0vw",
+					"width": "116.93333333333334vw",
+					"height": "12.133333333333333vw"
+				},
+				"imageName": "a9b81bca-c9cf-4440-bad9-8256f2e9de2b",
+				"rawUrl": "game/paodao/起跑线.png",
+				"rect": [
+					0,
+					0,
+					877,
+					91
+				],
+				"width": 877,
+				"height": 91,
+				"name": "起跑线.png"
+			},
+			{
+				"category": "game-paodao",
+				"css": {
+					"backgroundSize": "122.53333333333333vw 144vw",
+					"backgroundPositionX": "0vw",
+					"backgroundPositionY": "0vw",
+					"width": "122.53333333333333vw",
+					"height": "144vw"
+				},
+				"imageName": "cca1f064-0b4a-4de2-93ee-1a4c3dec3d2c",
+				"rawUrl": "game/paodao/跑道.png",
+				"rect": [
+					0,
+					0,
+					919,
+					1080
+				],
+				"width": 919,
+				"height": 1080,
+				"name": "跑道.png"
+			},
+			{
+				"category": "game-paodao",
+				"css": {
+					"backgroundSize": "395.7333333333333vw 351.73333333333335vw",
+					"backgroundPositionX": "0vw",
+					"backgroundPositionY": "-74.13333333333333vw",
+					"width": "86.53333333333333vw",
+					"height": "75.33333333333333vw"
+				},
+				"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+				"rawUrl": "game/paodao/右闪电.png",
+				"rect": [
+					0,
+					556,
+					649,
+					565
+				],
+				"width": 649,
+				"height": 565,
+				"name": "右闪电.png"
+			},
+			{
+				"category": "game-paodao",
+				"css": {
+					"backgroundSize": "395.7333333333333vw 351.73333333333335vw",
+					"backgroundPositionX": "-100vw",
+					"backgroundPositionY": "0vw",
+					"width": "86.53333333333333vw",
+					"height": "75.33333333333333vw"
+				},
+				"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+				"rawUrl": "game/paodao/左闪电.png",
+				"rect": [
+					750,
+					0,
+					649,
+					565
+				],
+				"width": 649,
+				"height": 565,
+				"name": "左闪电.png"
+			}
+		],
+		"game-stop": [
+			{
+				"category": "game-stop",
+				"css": {
+					"backgroundSize": "170.4vw 139.86666666666667vw",
+					"backgroundPositionX": "-34.4vw",
+					"backgroundPositionY": "-89.06666666666668vw",
+					"width": "15.2vw",
+					"height": "12.4vw"
+				},
+				"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+				"rawUrl": "game/stop/暂停按钮.png",
+				"rect": [
+					258,
+					668,
+					114,
+					93
+				],
+				"width": 114,
+				"height": 93,
+				"name": "暂停按钮.png"
+			},
+			{
+				"category": "game-stop",
+				"css": {
+					"backgroundSize": "170.4vw 139.86666666666667vw",
+					"backgroundPositionX": "-135.06666666666666vw",
+					"backgroundPositionY": "-66.93333333333334vw",
+					"width": "25.066666666666666vw",
+					"height": "12.666666666666668vw"
+				},
+				"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+				"rawUrl": "game/stop/继续.png",
+				"rect": [
+					1013,
+					502,
+					188,
+					95
+				],
+				"width": 188,
+				"height": 95,
+				"name": "继续.png"
+			},
+			{
+				"category": "game-stop",
+				"css": {
+					"backgroundSize": "170.4vw 139.86666666666667vw",
+					"backgroundPositionX": "-135.06666666666666vw",
+					"backgroundPositionY": "-82.26666666666667vw",
+					"width": "25.066666666666666vw",
+					"height": "12.666666666666668vw"
+				},
+				"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+				"rawUrl": "game/stop/重置.png",
+				"rect": [
+					1013,
+					617,
+					188,
+					95
+				],
+				"width": 188,
+				"height": 95,
+				"name": "重置.png"
+			},
+			{
+				"category": "game-stop",
+				"css": {
+					"backgroundSize": "256vw 144vw",
+					"backgroundPositionX": "0vw",
+					"backgroundPositionY": "0vw",
+					"width": "256vw",
+					"height": "144vw"
+				},
+				"imageName": "b03316e1-835c-4f80-b55f-5fb1353cca34",
+				"rawUrl": "game/stop/游戏预览.png",
+				"rect": [
+					0,
+					0,
+					1920,
+					1080
+				],
+				"width": 1920,
+				"height": 1080,
+				"name": "游戏预览.png"
+			},
+			{
+				"category": "game-stop",
+				"css": {
+					"backgroundSize": "395.7333333333333vw 351.73333333333335vw",
+					"backgroundPositionX": "-122.26666666666665vw",
+					"backgroundPositionY": "-152.13333333333335vw",
+					"width": "89.86666666666666vw",
+					"height": "28.4vw"
+				},
+				"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+				"rawUrl": "game/stop/提示框.png",
+				"rect": [
+					917,
+					1141,
+					674,
+					213
+				],
+				"width": 674,
+				"height": 213,
+				"name": "提示框.png"
+			},
+			{
+				"category": "game-stop",
+				"css": {
+					"backgroundSize": "395.7333333333333vw 351.73333333333335vw",
+					"backgroundPositionX": "0vw",
+					"backgroundPositionY": "0vw",
+					"width": "97.33333333333334vw",
+					"height": "71.46666666666667vw"
+				},
+				"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+				"rawUrl": "game/stop/暂停面板.png",
+				"rect": [
+					0,
+					0,
+					730,
+					536
+				],
+				"width": 730,
+				"height": 536,
+				"name": "暂停面板.png"
+			}
+		],
+		"game-p1-gongji": [
+			{
+				"category": "game-p1-gongji",
+				"css": {
+					"backgroundSize": "395.7333333333333vw 351.73333333333335vw",
+					"backgroundPositionX": "-256.8vw",
+					"backgroundPositionY": "-54.93333333333334vw",
+					"width": "52.800000000000004vw",
+					"height": "48vw"
+				},
+				"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+				"rawUrl": "game/p1/gongji/攻击1.png",
+				"rect": [
+					1926,
+					412,
+					396,
+					360
+				],
+				"width": 396,
+				"height": 360,
+				"name": "攻击1.png"
+			},
+			{
+				"category": "game-p1-gongji",
+				"css": {
+					"backgroundSize": "395.7333333333333vw 351.73333333333335vw",
+					"backgroundPositionX": "0vw",
+					"backgroundPositionY": "-253.6vw",
+					"width": "48.4vw",
+					"height": "47.86666666666667vw"
+				},
+				"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+				"rawUrl": "game/p1/gongji/攻击2.png",
+				"rect": [
+					0,
+					1902,
+					363,
+					359
+				],
+				"width": 363,
+				"height": 359,
+				"name": "攻击2.png"
+			},
+			{
+				"category": "game-p1-gongji",
+				"css": {
+					"backgroundSize": "395.7333333333333vw 351.73333333333335vw",
+					"backgroundPositionX": "0vw",
+					"backgroundPositionY": "-152.13333333333335vw",
+					"width": "61.86666666666667vw",
+					"height": "47.46666666666667vw"
+				},
+				"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+				"rawUrl": "game/p1/gongji/攻击4.png",
+				"rect": [
+					0,
+					1141,
+					464,
+					356
+				],
+				"width": 464,
+				"height": 356,
+				"name": "攻击4.png"
+			},
+			{
+				"category": "game-p1-gongji",
+				"css": {
+					"backgroundSize": "395.7333333333333vw 351.73333333333335vw",
+					"backgroundPositionX": "-64.53333333333333vw",
+					"backgroundPositionY": "-152.13333333333335vw",
+					"width": "55.06666666666666vw",
+					"height": "47.333333333333336vw"
+				},
+				"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+				"rawUrl": "game/p1/gongji/攻击3.png",
+				"rect": [
+					484,
+					1141,
+					413,
+					355
+				],
+				"width": 413,
+				"height": 355,
+				"name": "攻击3.png"
+			}
+		],
+		"game-p1-paobu": [
+			{
+				"category": "game-p1-paobu",
+				"css": {
+					"backgroundSize": "395.7333333333333vw 351.73333333333335vw",
+					"backgroundPositionX": "0vw",
+					"backgroundPositionY": "-304.1333333333333vw",
+					"width": "40.8vw",
+					"height": "47.599999999999994vw"
+				},
+				"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+				"rawUrl": "game/p1/paobu/伤心1.png",
+				"rect": [
+					0,
+					2281,
+					306,
+					357
+				],
+				"width": 306,
+				"height": 357,
+				"name": "伤心1.png"
+			},
+			{
+				"category": "game-p1-paobu",
+				"css": {
+					"backgroundSize": "395.7333333333333vw 351.73333333333335vw",
+					"backgroundPositionX": "-43.46666666666666vw",
+					"backgroundPositionY": "-304.1333333333333vw",
+					"width": "40.8vw",
+					"height": "47.599999999999994vw"
+				},
+				"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+				"rawUrl": "game/p1/paobu/伤心2.png",
+				"rect": [
+					326,
+					2281,
+					306,
+					357
+				],
+				"width": 306,
+				"height": 357,
+				"name": "伤心2.png"
+			},
+			{
+				"category": "game-p1-paobu",
+				"css": {
+					"backgroundSize": "395.7333333333333vw 351.73333333333335vw",
+					"backgroundPositionX": "-182vw",
+					"backgroundPositionY": "-253.6vw",
+					"width": "40.400000000000006vw",
+					"height": "47.199999999999996vw"
+				},
+				"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+				"rawUrl": "game/p1/paobu/开心1.png",
+				"rect": [
+					1365,
+					1902,
+					303,
+					354
+				],
+				"width": 303,
+				"height": 354,
+				"name": "开心1.png"
+			},
+			{
+				"category": "game-p1-paobu",
+				"css": {
+					"backgroundSize": "395.7333333333333vw 351.73333333333335vw",
+					"backgroundPositionX": "-138.39999999999998vw",
+					"backgroundPositionY": "-253.6vw",
+					"width": "40.93333333333333vw",
+					"height": "47.46666666666667vw"
+				},
+				"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+				"rawUrl": "game/p1/paobu/开心2.png",
+				"rect": [
+					1038,
+					1902,
+					307,
+					356
+				],
+				"width": 307,
+				"height": 356,
+				"name": "开心2.png"
+			},
+			{
+				"category": "game-p1-paobu",
+				"css": {
+					"backgroundSize": "395.7333333333333vw 351.73333333333335vw",
+					"backgroundPositionX": "-51.06666666666667vw",
+					"backgroundPositionY": "-253.6vw",
+					"width": "41.06666666666667vw",
+					"height": "47.86666666666667vw"
+				},
+				"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+				"rawUrl": "game/p1/paobu/正常跑1.png",
+				"rect": [
+					383,
+					1902,
+					308,
+					359
+				],
+				"width": 308,
+				"height": 359,
+				"name": "正常跑1.png"
+			},
+			{
+				"category": "game-p1-paobu",
+				"css": {
+					"backgroundSize": "395.7333333333333vw 351.73333333333335vw",
+					"backgroundPositionX": "-94.8vw",
+					"backgroundPositionY": "-253.6vw",
+					"width": "40.93333333333333vw",
+					"height": "47.733333333333334vw"
+				},
+				"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+				"rawUrl": "game/p1/paobu/正常跑2.png",
+				"rect": [
+					711,
+					1902,
+					307,
+					358
+				],
+				"width": 307,
+				"height": 358,
+				"name": "正常跑2.png"
+			}
+		],
+		"game-p1-shandian": [
+			{
+				"category": "game-p1-shandian",
+				"css": {
+					"backgroundSize": "395.7333333333333vw 351.73333333333335vw",
+					"backgroundPositionX": "-107.46666666666667vw",
+					"backgroundPositionY": "-202.26666666666668vw",
+					"width": "52vw",
+					"height": "46.400000000000006vw"
+				},
+				"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+				"rawUrl": "game/p1/shandian/闪电1.png",
+				"rect": [
+					806,
+					1517,
+					390,
+					348
+				],
+				"width": 390,
+				"height": 348,
+				"name": "闪电1.png"
+			},
+			{
+				"category": "game-p1-shandian",
+				"css": {
+					"backgroundSize": "395.7333333333333vw 351.73333333333335vw",
+					"backgroundPositionX": "-162.13333333333333vw",
+					"backgroundPositionY": "-202.26666666666668vw",
+					"width": "51.733333333333334vw",
+					"height": "46.13333333333333vw"
+				},
+				"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+				"rawUrl": "game/p1/shandian/闪电2.png",
+				"rect": [
+					1216,
+					1517,
+					388,
+					346
+				],
+				"width": 388,
+				"height": 346,
+				"name": "闪电2.png"
+			}
+		],
+		"game-p2-gongji": [
+			{
+				"category": "game-p2-gongji",
+				"css": {
+					"backgroundSize": "395.7333333333333vw 351.73333333333335vw",
+					"backgroundPositionX": "-256.8vw",
+					"backgroundPositionY": "0vw",
+					"width": "53.86666666666666vw",
+					"height": "52.26666666666666vw"
+				},
+				"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+				"rawUrl": "game/p2/gongji/攻击1.png",
+				"rect": [
+					1926,
+					0,
+					404,
+					392
+				],
+				"width": 404,
+				"height": 392,
+				"name": "攻击1.png"
+			},
+			{
+				"category": "game-p2-gongji",
+				"css": {
+					"backgroundSize": "395.7333333333333vw 351.73333333333335vw",
+					"backgroundPositionX": "-256.8vw",
+					"backgroundPositionY": "-105.60000000000001vw",
+					"width": "48.4vw",
+					"height": "52.26666666666666vw"
+				},
+				"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+				"rawUrl": "game/p2/gongji/攻击2.png",
+				"rect": [
+					1926,
+					792,
+					363,
+					392
+				],
+				"width": 363,
+				"height": 392,
+				"name": "攻击2.png"
+			},
+			{
+				"category": "game-p2-gongji",
+				"css": {
+					"backgroundSize": "395.7333333333333vw 351.73333333333335vw",
+					"backgroundPositionX": "-189.2vw",
+					"backgroundPositionY": "-49.733333333333334vw",
+					"width": "57.333333333333336vw",
+					"height": "52.13333333333333vw"
+				},
+				"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+				"rawUrl": "game/p2/gongji/攻击3.png",
+				"rect": [
+					1419,
+					373,
+					430,
+					391
+				],
+				"width": 430,
+				"height": 391,
+				"name": "攻击3.png"
+			},
+			{
+				"category": "game-p2-gongji",
+				"css": {
+					"backgroundSize": "395.7333333333333vw 351.73333333333335vw",
+					"backgroundPositionX": "-100vw",
+					"backgroundPositionY": "-78vw",
+					"width": "67.60000000000001vw",
+					"height": "52vw"
+				},
+				"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+				"rawUrl": "game/p2/gongji/攻击4.png",
+				"rect": [
+					750,
+					585,
+					507,
+					390
+				],
+				"width": 507,
+				"height": 390,
+				"name": "攻击4.png"
+			}
+		],
+		"game-p2-paobu": [
+			{
+				"category": "game-p2-paobu",
+				"css": {
+					"backgroundSize": "395.7333333333333vw 351.73333333333335vw",
+					"backgroundPositionX": "-313.3333333333333vw",
+					"backgroundPositionY": "-154.13333333333335vw",
+					"width": "39.733333333333334vw",
+					"height": "48.53333333333333vw"
+				},
+				"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+				"rawUrl": "game/p2/paobu/伤心2.png",
+				"rect": [
+					2350,
+					1156,
+					298,
+					364
+				],
+				"width": 298,
+				"height": 364,
+				"name": "伤心2.png"
+			},
+			{
+				"category": "game-p2-paobu",
+				"css": {
+					"backgroundSize": "395.7333333333333vw 351.73333333333335vw",
+					"backgroundPositionX": "-313.3333333333333vw",
+					"backgroundPositionY": "-51.6vw",
+					"width": "39.86666666666667vw",
+					"height": "48.66666666666667vw"
+				},
+				"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+				"rawUrl": "game/p2/paobu/伤心1.png",
+				"rect": [
+					2350,
+					387,
+					299,
+					365
+				],
+				"width": 299,
+				"height": 365,
+				"name": "伤心1.png"
+			},
+			{
+				"category": "game-p2-paobu",
+				"css": {
+					"backgroundSize": "395.7333333333333vw 351.73333333333335vw",
+					"backgroundPositionX": "-313.3333333333333vw",
+					"backgroundPositionY": "-205.33333333333331vw",
+					"width": "39.733333333333334vw",
+					"height": "48.4vw"
+				},
+				"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+				"rawUrl": "game/p2/paobu/开心1.png",
+				"rect": [
+					2350,
+					1540,
+					298,
+					363
+				],
+				"width": 298,
+				"height": 363,
+				"name": "开心1.png"
+			},
+			{
+				"category": "game-p2-paobu",
+				"css": {
+					"backgroundSize": "395.7333333333333vw 351.73333333333335vw",
+					"backgroundPositionX": "-356.1333333333333vw",
+					"backgroundPositionY": "0vw",
+					"width": "39.6vw",
+					"height": "48.266666666666666vw"
+				},
+				"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+				"rawUrl": "game/p2/paobu/开心2.png",
+				"rect": [
+					2671,
+					0,
+					297,
+					362
+				],
+				"width": 297,
+				"height": 362,
+				"name": "开心2.png"
+			},
+			{
+				"category": "game-p2-paobu",
+				"css": {
+					"backgroundSize": "395.7333333333333vw 351.73333333333335vw",
+					"backgroundPositionX": "-313.3333333333333vw",
+					"backgroundPositionY": "0vw",
+					"width": "40.13333333333333vw",
+					"height": "48.93333333333334vw"
+				},
+				"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+				"rawUrl": "game/p2/paobu/正常跑1.png",
+				"rect": [
+					2350,
+					0,
+					301,
+					367
+				],
+				"width": 301,
+				"height": 367,
+				"name": "正常跑1.png"
+			},
+			{
+				"category": "game-p2-paobu",
+				"css": {
+					"backgroundSize": "395.7333333333333vw 351.73333333333335vw",
+					"backgroundPositionX": "-313.3333333333333vw",
+					"backgroundPositionY": "-102.93333333333334vw",
+					"width": "39.86666666666667vw",
+					"height": "48.53333333333333vw"
+				},
+				"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+				"rawUrl": "game/p2/paobu/正常跑2.png",
+				"rect": [
+					2350,
+					772,
+					299,
+					364
+				],
+				"width": 299,
+				"height": 364,
+				"name": "正常跑2.png"
+			}
+		],
+		"game-p2-shandian": [
+			{
+				"category": "game-p2-shandian",
+				"css": {
+					"backgroundSize": "395.7333333333333vw 351.73333333333335vw",
+					"backgroundPositionX": "-53.733333333333334vw",
+					"backgroundPositionY": "-202.26666666666668vw",
+					"width": "51.06666666666667vw",
+					"height": "48.53333333333333vw"
+				},
+				"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+				"rawUrl": "game/p2/shandian/闪电1.png",
+				"rect": [
+					403,
+					1517,
+					383,
+					364
+				],
+				"width": 383,
+				"height": 364,
+				"name": "闪电1.png"
+			},
+			{
+				"category": "game-p2-shandian",
+				"css": {
+					"backgroundSize": "395.7333333333333vw 351.73333333333335vw",
+					"backgroundPositionX": "0vw",
+					"backgroundPositionY": "-202.26666666666668vw",
+					"width": "51.06666666666667vw",
+					"height": "48.66666666666667vw"
+				},
+				"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+				"rawUrl": "game/p2/shandian/闪电2.png",
+				"rect": [
+					0,
+					1517,
+					383,
+					365
+				],
+				"width": 383,
+				"height": 365,
+				"name": "闪电2.png"
+			}
+		]
+	},
+	"rawUrls": [
+		{
+			"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+			"rawUrl": "game/daan/作答结果按钮.png"
+		},
+		{
+			"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+			"rawUrl": "game/daan/对.png"
+		},
+		{
+			"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+			"rawUrl": "game/daan/返回.png"
+		},
+		{
+			"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+			"rawUrl": "game/daan/重新开始.png"
+		},
+		{
+			"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+			"rawUrl": "game/daan/错.png"
+		},
+		{
+			"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+			"rawUrl": "game/daan/题目答案按钮.png"
+		},
+		{
+			"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+			"rawUrl": "game/p1/冰冻.png"
+		},
+		{
+			"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+			"rawUrl": "game/p1/锤晕.png"
+		},
+		{
+			"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+			"rawUrl": "game/jieguo/布丁头像.png"
+		},
+		{
+			"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+			"rawUrl": "game/jieguo/豆豆头像.png"
+		},
+		{
+			"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+			"rawUrl": "game/jieguo/重新开始按钮.png"
+		},
+		{
+			"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+			"rawUrl": "game/jieguo/题目答案按钮.png"
+		},
+		{
+			"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+			"rawUrl": "game/panel/对.png"
+		},
+		{
+			"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+			"rawUrl": "game/panel/对选中.png"
+		},
+		{
+			"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+			"rawUrl": "game/panel/错.png"
+		},
+		{
+			"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+			"rawUrl": "game/panel/错选中.png"
+		},
+		{
+			"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+			"rawUrl": "game/p2/冰冻.png"
+		},
+		{
+			"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+			"rawUrl": "game/p2/锤晕.png"
+		},
+		{
+			"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+			"rawUrl": "game/paodao/人物打勾对.png"
+		},
+		{
+			"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+			"rawUrl": "game/paodao/人物打勾错.png"
+		},
+		{
+			"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+			"rawUrl": "game/paodao/右锤子.png"
+		},
+		{
+			"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+			"rawUrl": "game/paodao/左锤子.png"
+		},
+		{
+			"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+			"rawUrl": "game/paodao/超时.png"
+		},
+		{
+			"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+			"rawUrl": "game/stop/暂停按钮.png"
+		},
+		{
+			"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+			"rawUrl": "game/stop/继续.png"
+		},
+		{
+			"imageName": "79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+			"rawUrl": "game/stop/重置.png"
+		},
+		{
+			"imageName": "d5017ab8-d2d5-4da1-a16d-2c9792a0478c",
+			"rawUrl": "game/daan/分割线.png"
+		},
+		{
+			"imageName": "a5c9a15a-4d08-4846-9506-947370f4c1e5",
+			"rawUrl": "game/daan/背景.png"
+		},
+		{
+			"imageName": "d0ebe4a2-72ea-44bd-ab4e-a27ee2b93eef",
+			"rawUrl": "game/jieguo/失败.png"
+		},
+		{
+			"imageName": "de24423d-288d-40dc-9424-4197a66a8e69",
+			"rawUrl": "game/jieguo/平局.png"
+		},
+		{
+			"imageName": "6cf30bdd-7e06-47fe-b3e6-1e75c401d086",
+			"rawUrl": "game/jieguo/胜利.png"
+		},
+		{
+			"imageName": "3a613106-7498-49ef-a88b-4bfd281658c6",
+			"rawUrl": "game/panel/右侧背景.png"
+		},
+		{
+			"imageName": "c3f724d3-0a28-4e09-99a2-3333162ce1d2",
+			"rawUrl": "game/panel/左侧背景.png"
+		},
+		{
+			"imageName": "c73bd20e-670d-44d5-a385-b823f9027dac",
+			"rawUrl": "game/paodao/终点线.png"
+		},
+		{
+			"imageName": "a9b81bca-c9cf-4440-bad9-8256f2e9de2b",
+			"rawUrl": "game/paodao/起跑线.png"
+		},
+		{
+			"imageName": "cca1f064-0b4a-4de2-93ee-1a4c3dec3d2c",
+			"rawUrl": "game/paodao/跑道.png"
+		},
+		{
+			"imageName": "b03316e1-835c-4f80-b55f-5fb1353cca34",
+			"rawUrl": "game/stop/游戏预览.png"
+		},
+		{
+			"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+			"rawUrl": "game/panel/对话框对.png"
+		},
+		{
+			"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+			"rawUrl": "game/panel/对话框错.png"
+		},
+		{
+			"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+			"rawUrl": "game/paodao/右闪电.png"
+		},
+		{
+			"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+			"rawUrl": "game/paodao/左闪电.png"
+		},
+		{
+			"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+			"rawUrl": "game/stop/提示框.png"
+		},
+		{
+			"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+			"rawUrl": "game/stop/暂停面板.png"
+		},
+		{
+			"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+			"rawUrl": "game/p1/gongji/攻击1.png"
+		},
+		{
+			"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+			"rawUrl": "game/p1/gongji/攻击2.png"
+		},
+		{
+			"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+			"rawUrl": "game/p1/gongji/攻击4.png"
+		},
+		{
+			"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+			"rawUrl": "game/p1/gongji/攻击3.png"
+		},
+		{
+			"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+			"rawUrl": "game/p1/paobu/伤心1.png"
+		},
+		{
+			"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+			"rawUrl": "game/p1/paobu/伤心2.png"
+		},
+		{
+			"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+			"rawUrl": "game/p1/paobu/开心1.png"
+		},
+		{
+			"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+			"rawUrl": "game/p1/paobu/开心2.png"
+		},
+		{
+			"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+			"rawUrl": "game/p1/paobu/正常跑1.png"
+		},
+		{
+			"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+			"rawUrl": "game/p1/paobu/正常跑2.png"
+		},
+		{
+			"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+			"rawUrl": "game/p1/shandian/闪电1.png"
+		},
+		{
+			"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+			"rawUrl": "game/p1/shandian/闪电2.png"
+		},
+		{
+			"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+			"rawUrl": "game/p2/gongji/攻击1.png"
+		},
+		{
+			"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+			"rawUrl": "game/p2/gongji/攻击2.png"
+		},
+		{
+			"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+			"rawUrl": "game/p2/gongji/攻击3.png"
+		},
+		{
+			"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+			"rawUrl": "game/p2/gongji/攻击4.png"
+		},
+		{
+			"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+			"rawUrl": "game/p2/paobu/伤心2.png"
+		},
+		{
+			"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+			"rawUrl": "game/p2/paobu/伤心1.png"
+		},
+		{
+			"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+			"rawUrl": "game/p2/paobu/开心1.png"
+		},
+		{
+			"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+			"rawUrl": "game/p2/paobu/开心2.png"
+		},
+		{
+			"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+			"rawUrl": "game/p2/paobu/正常跑1.png"
+		},
+		{
+			"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+			"rawUrl": "game/p2/paobu/正常跑2.png"
+		},
+		{
+			"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+			"rawUrl": "game/p2/shandian/闪电1.png"
+		},
+		{
+			"imageName": "385c0d35-a771-4b2d-a422-5360858dd790",
+			"rawUrl": "game/p2/shandian/闪电2.png"
+		}
+	],
+	"imageIds": [
+		"79ce4a45-210b-4b45-aa5c-178fdde2d5cc",
+		"d5017ab8-d2d5-4da1-a16d-2c9792a0478c",
+		"a5c9a15a-4d08-4846-9506-947370f4c1e5",
+		"d0ebe4a2-72ea-44bd-ab4e-a27ee2b93eef",
+		"de24423d-288d-40dc-9424-4197a66a8e69",
+		"6cf30bdd-7e06-47fe-b3e6-1e75c401d086",
+		"3a613106-7498-49ef-a88b-4bfd281658c6",
+		"c3f724d3-0a28-4e09-99a2-3333162ce1d2",
+		"c73bd20e-670d-44d5-a385-b823f9027dac",
+		"a9b81bca-c9cf-4440-bad9-8256f2e9de2b",
+		"cca1f064-0b4a-4de2-93ee-1a4c3dec3d2c",
+		"b03316e1-835c-4f80-b55f-5fb1353cca34",
+		"385c0d35-a771-4b2d-a422-5360858dd790"
+	]
+}

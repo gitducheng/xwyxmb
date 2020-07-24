@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "id": 0,
+      "text": "1+1=2",
+      "isCheck": 1
+    },
+    {
+      "id": 1,
+      "text": "2+2=4",
+      "isCheck": 1
+    },
+    {
+      "id": 2,
+      "text": "4+2=5",
+      "isCheck": 2
+    }
+  ],
+  "second": 7
+}
