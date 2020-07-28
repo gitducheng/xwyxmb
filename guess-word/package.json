@@ -1,0 +1,26 @@
+{
+  "name": "guess-word",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "export": "nuxt export",
+    "serve": "nuxt serve"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "animate.css": "^4.1.0",
+    "element-ui": "^2.13.2",
+    "hilojs": "2.0.0",
+    "js-audio-recorder": "^1.0.6",
+    "nuxt": "^2.13.0",
+    "vue-upload-component": "^2.8.20"
+  },
+  "devDependencies": {
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2",
+    "scss-loader": "0.0.1"
+  }
+}

@@ -130,16 +130,18 @@ export default {
     Result
   },
   async mounted () {
-    console.log(initQuestion)
+    // console.log(initQuestion)
     // console.log(localStorage.getItem('configData'))
+    let configData2
     try {
-      this.configData = await this.$testload()
-      if (typeof this.configData === 'string') {
-        this.configData = JSON.parse(this.configData || null)
+      configData2 = await this.$testload()
+      if (typeof configData2 === 'string') {
+        configData2 = JSON.parse(configData2 || null)
       }
     } catch (error) {
-      this.configData = JSON.parse(localStorage.getItem('configData') || null)
+      configData2 = JSON.parse(localStorage.getItem('configData') || null)
     }
+    if (configData2) this.configData = configData2
   },
   methods: {
     handleInput (val) {

@@ -1,0 +1,17 @@
+{
+  "data": [
+    {
+      "zhengText": "苹果",
+      "zhengImg": "",
+      "fanText": "apple",
+      "fanImg": ""
+    },
+    {
+      "zhengText": "梨",
+      "zhengImg": "",
+      "fanText": "pear",
+      "fanImg": ""
+    }
+  ],
+  "title": "翻翻卡游戏"
+}

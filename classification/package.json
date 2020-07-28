@@ -1,0 +1,22 @@
+{
+  "name": "classification",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "export": "nuxt export",
+    "serve": "nuxt serve"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.11.0",
+    "element-ui": "^2.13.2",
+    "hilojs": "^2.0.1",
+    "node-sass": "^4.14.1",
+    "nuxt": "^2.13.0",
+    "sass-loader": "^9.0.2",
+    "scss-loader": "0.0.1"
+  },
+  "devDependencies": {}
+}

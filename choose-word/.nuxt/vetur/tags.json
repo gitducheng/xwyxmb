@@ -1,0 +1,32 @@
+{
+  "GFooter": {
+    "description": "Auto imported from components/GFooter.vue"
+  },
+  "LazyGFooter": {
+    "description": "Auto imported from components/GFooter.vue"
+  },
+  "GHeader": {
+    "description": "Auto imported from components/GHeader.vue"
+  },
+  "LazyGHeader": {
+    "description": "Auto imported from components/GHeader.vue"
+  },
+  "GInput": {
+    "description": "Auto imported from components/GInput.vue"
+  },
+  "LazyGInput": {
+    "description": "Auto imported from components/GInput.vue"
+  },
+  "GInputSimple": {
+    "description": "Auto imported from components/GInputSimple.vue"
+  },
+  "LazyGInputSimple": {
+    "description": "Auto imported from components/GInputSimple.vue"
+  },
+  "GTextarea": {
+    "description": "Auto imported from components/GTextarea.vue"
+  },
+  "LazyGTextarea": {
+    "description": "Auto imported from components/GTextarea.vue"
+  }
+}
