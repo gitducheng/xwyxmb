@@ -1,0 +1,16 @@
+[
+  {
+    "name": "config",
+    "path": "/config",
+    "component": "C:\\\\Users\\\\Administrator\\\\Desktop\\\\20200705\\\\20200729\\\\xwyxmb\\\\line\\\\pages\\\\config.vue",
+    "chunkName": "pages/config",
+    "_name": "_1f2ea8db"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\Administrator\\\\Desktop\\\\20200705\\\\20200729\\\\xwyxmb\\\\line\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_0eff8b6e"
+  }
+]

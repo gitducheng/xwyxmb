@@ -1,7 +1,7 @@
 export default {
   mode: 'spa',
   router: {
-    // base: './',
+    base: './',
     mode: 'hash'
   },
   /*
@@ -53,10 +53,10 @@ export default {
    */
   build: {
     transpile: [/^element-ui/],
-    // publicPath: './',
+    publicPath: './',
     /*
      ** You can extend webpack config here
      */
-    extend (config, ctx) { }
+    extend(config, ctx) {}
   }
 }
