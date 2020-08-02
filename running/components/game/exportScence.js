@@ -66,43 +66,7 @@ export default class ExportScence extends Hilo.Container {
             color: '#4BDFE8'
         }).addTo(this)
         let isActive = false
-        if (Hilo.event.POINTER_START == "touchstart") {
-            this.on('mousedown', (e) => {
-                if (preview) return
-                if (isActive) return
-                isActive = true
-                startNumber.visible = true
-                Hilo.Tween.to(
-                    startNumber, { text: -2 }, {
-                        duration: 4000,
 
-                        onUpdate: (r, v) => {
-                            const num = parseInt(startNumber.text)
-                            if (startNumber.text >= 1) {
-                                startNumber.text = num
-                                return
-                            }
-                            if (num === 0) {
-                                startNumber.text = 'Ready!'
-                                return
-                            }
-                            if (startNumber.text < 0) {
-                                startNumber.text = 'GO!'
-                                return
-                            }
-                        },
-                        onComplete: () => {
-                            this.visible = false
-                            startNumber.alpha = 1
-                            startNumber.text = 4
-                            startNumber.visible = false
-                            this.onStart && this.onStart()
-                            isActive = false
-                        }
-                    }
-                )
-            })
-        }
         this.on(Hilo.event.POINTER_START, (e) => {
             if (preview) return
             if (isActive) return

@@ -317,26 +317,6 @@ export default class ResultPanel extends Hilo.Container {
                 rect)
         })
 
-        if (Hilo.event.POINTER_MOVE == "touchmove") {
-            this.stage.on('mousemove', (e) => {
-                if (!this.readyLine.isStart) return
-                    // 正则表达式 RegExp(/left/).test(str)
-                if (this.temporaryLinesMove.getNumChildren() > 0) {
-                    this.temporaryLinesMove.removeChildAt(0)
-                }
-                let line = new Hilo.Graphics({
-                    x: 0,
-                    y: 0,
-                    visible: true,
-                }).addTo(this.temporaryLinesMove)
-                line.beginPath()
-                    .moveTo(e.stageX, e.stageY)
-                    .lineStyle(8, '#a7e049')
-                    .lineTo(this.readyLine.x, this.readyLine.y)
-                    .endFill()
-                    .addTo(this.temporaryLinesMove)
-            })
-        }
         this.stage.on(Hilo.event.POINTER_MOVE, (e) => {
             if (!this.readyLine.isStart) return
                 // 正则表达式 RegExp(/left/).test(str)
@@ -360,53 +340,6 @@ export default class ResultPanel extends Hilo.Container {
     panelClick(type, eventTarget, target,
         properties, initX, initY, baseScale,
         targetScale, rect) {
-        if (Hilo.event.POINTER_START == "touchstart") {
-            eventTarget.on('mousedown', (e) => {
-                if (properties.type !== 'panel') return
-                this.readyLine = {
-                    isStart: true,
-                    x: e.stageX,
-                    y: e.stageY
-                }
-                if (type === 'right' && !this.selected.length) this.selected[0] = null
-                this.selected[type === 'left' ? 0 : 1] = e.eventTarget.id
-
-                if (this.temporarySelected.getNumChildren() > 0) {
-                    this.temporarySelected.removeChildAt(0)
-                }
-                let selectedCanvas = new Hilo.Graphics({
-                    x: initX,
-                    y: initY,
-                    visible: false
-                }).addTo(this.temporarySelected)
-
-                selectedCanvas.lineStyle(4, "#ff2a2a").drawRoundRect(0, 0, rect[2] * baseScale, rect[3] * baseScale, 20).endFill()
-
-                Hilo.Tween.to(
-                    target, {
-                        scaleX: targetScale,
-                        scaleY: targetScale,
-                        x: initX - (rect[2] * 0.05) / 2 - (this.isText ? 0 : 8),
-                        y: initY - (rect[3] * 0.05) / 2 - (this.isText ? 0 : 8)
-                    }, {
-                        duration: 100,
-                        onComplete() {
-                            // this.temporarySelected.removeChild()
-                            Hilo.Tween.to(
-                                target, { scaleX: baseScale, scaleY: baseScale, x: initX, y: initY }, {
-                                    duration: 300,
-                                    onComplete() {
-                                        selectedCanvas.visible = true
-                                    }
-                                }
-                            )
-                        }
-                    }
-                )
-                if (properties.type !== 'panel') return
-                this.line(properties)
-            })
-        }
         eventTarget.on(Hilo.event.POINTER_START, (e) => {
             if (properties.type !== 'panel') return
             this.readyLine = {

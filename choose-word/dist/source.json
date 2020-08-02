@@ -41,7 +41,7 @@
     },
     "originBg": {
         "id": "originBg",
-        "src": "/img/originBg.png",
+        "src": "./img/originBg.png",
         "rect": [
             557,
             533,
@@ -51,7 +51,7 @@
     },
     "restart": {
         "id": "restart",
-        "src": "/img/restart.png",
+        "src": "./img/restart.png",
         "rect": [
             1056,
             925,
@@ -61,7 +61,7 @@
     },
     "result": {
         "id": "result",
-        "src": "/img/result.png",
+        "src": "./img/result.png",
         "rect": [
             528,
             925,
@@ -71,7 +71,7 @@
     },
     "submit": {
         "id": "submit",
-        "src": "/img/submit.png",
+        "src": "./img/submit.png",
         "rect": [
             791,
             925,
@@ -81,7 +81,7 @@
     },
     "yes": {
         "id": "yes",
-        "src": "/img/yes.png",
+        "src": "./img/yes.png",
         "rect": [
             783,
             570,
@@ -91,7 +91,7 @@
     },
     "no": {
         "id": "no",
-        "src": "/img/no.png",
+        "src": "./img/no.png",
         "rect": [
             964,
             350,

@@ -87,10 +87,47 @@ export default class InitGame {
             stage.resize(width, height, true)
         }
 
-        if (Hilo.event.POINTER_START == "touchstart") {
-            stage.enableDOMEvent('mousedown', true)
-            stage.enableDOMEvent('mousemove', true)
-            stage.enableDOMEvent('mouseup', true)
+        function touchHandler(event) {
+            var touches = event.changedTouches,
+                first = touches[0],
+                type = "";
+            switch (event.type) {
+                case "touchstart":
+                    type = "mousedown";
+                    break;
+                case "touchmove":
+                    type = "mousemove";
+                    break;
+                case "touchend":
+                    type = "mouseup";
+                    break;
+                default:
+                    return;
+            }
+
+            // initMouseEvent(type, canBubble, cancelable, view, clickCount, 
+            //                screenX, screenY, clientX, clientY, ctrlKey, 
+            //                altKey, shiftKey, metaKey, button, relatedTarget);
+
+            var simulatedEvent = document.createEvent("MouseEvent");
+            simulatedEvent.initMouseEvent(type, true, true, window, 1,
+                first.screenX, first.screenY,
+                first.clientX, first.clientY, false,
+                false, false, false, 0 /*left*/ , null);
+
+            first.target.dispatchEvent(simulatedEvent);
+        }
+
+        function init() {
+            console.log('convert touch to mouse');
+            document.addEventListener("touchstart", touchHandler, true);
+            document.addEventListener("touchmove", touchHandler, true);
+            document.addEventListener("touchend", touchHandler, true);
+            document.addEventListener("touchcancel", touchHandler, true);
+        }
+
+        if (Hilo.event.POINTER_START == "mousedown") {
+            init();
         }
 
         stage.enableDOMEvent(Hilo.event.POINTER_START, true)
@@ -212,23 +249,6 @@ export default class InitGame {
             subClassList.push(container)
 
             // 拖动事件
-            if (Hilo.event.POINTER_MOVE == "touchmove") {
-                container.on('mousemove', e => {
-                    this.classNameList.forEach((name, nameIndex) => {
-                        if (name.hitTestObject(container)) {
-                            name.scaleX = 1.2
-                            name.scaleY = 1.2
-                            name.pivotX = name.x + (name.getScaledWidth() - name.width) / 2
-                        } else {
-                            name.scaleX = 1
-                            name.scaleY = 1
-                            name.pivotX = name.x
-                                // name.pivotY=name.y
-                        }
-                    })
-                })
-            }
-
             container.on(Hilo.event.POINTER_MOVE, e => {
                 this.classNameList.forEach((name, nameIndex) => {
                     if (name.hitTestObject(container)) {
@@ -243,31 +263,6 @@ export default class InitGame {
                     }
                 })
             })
-
-            if (Hilo.event.POINTER_END == "touchend") {
-                container.on('mouseup', e => {
-                    let isRight = false
-                    this.classNameList.forEach((name, nameIndex) => {
-                        if (name.hitTestObject(container)) {
-                            if (container.parentId === name.id) {
-                                isRight = true
-                                container.visible = false
-                                item.isComplete = true
-                            } else {
-                                Hilo.Tween.to(name, { x: name.x + 50 }, { duration: 80, reverse: true, ease: Hilo.Ease.Quad.EaseIn })
-                            }
-                        }
-                        name.scaleX = 1
-                        name.scaleY = 1
-                        name.pivotX = name.x
-                    })
-                    if (!isRight) {
-                        Hilo.Tween.to(container, { x: container.originX, y: container.originY }, { duration: 100, ease: Hilo.Ease.Quad.EaseIn })
-                    }
-                    const isComplete = this.subList.every(subClassItem => subClassItem.isComplete)
-                    if (isComplete) { this.callback(this, isComplete) }
-                })
-            }
 
             container.on(Hilo.event.POINTER_END, e => {
                 let isRight = false

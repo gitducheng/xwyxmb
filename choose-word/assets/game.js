@@ -35,26 +35,6 @@ export default class InitGame {
 
 
             // 事件处理
-            if (Hilo.event.POINTER_END == "touchend") {
-                this.submit.on('mouseup', e => {
-                    //提交
-                    if (this.myAnswer.join('') === this.answer.join('')) {
-                        this.initResultTip(true)
-                    } else {
-                        this.initResultTip(false)
-                    }
-                    this.submit.visible = false
-                    this.resultButtonContainer.visible = true
-                    this.optionList.forEach((item, index) => {
-                        item.stopDrag()
-                        if (item.answerResult) {
-                            item.getChildById('yes').visible = item.answerResult === 'yes'
-                            item.getChildById('no').visible = item.answerResult === 'no'
-                        }
-                    })
-                })
-            }
-
             this.submit.on(Hilo.event.POINTER_END, e => {
                 //提交
                 if (this.myAnswer.join('') === this.answer.join('')) {
@@ -73,24 +53,9 @@ export default class InitGame {
                 })
             })
 
-
-
-
-
-
-
-
             this.ticker.nextTick(() => {
                 callback(this)
             })
-
-
-
-
-
-
-
-
 
         })
 
@@ -127,10 +92,48 @@ export default class InitGame {
             stage.scaleY = innerHeight / height
             stage.resize(width, height, true)
         }
-        if (Hilo.event.POINTER_START == "touchstart") {
-            stage.enableDOMEvent('mousedown', true)
-            stage.enableDOMEvent('mousemove', true)
-            stage.enableDOMEvent('mouseup', true)
+
+        function touchHandler(event) {
+            var touches = event.changedTouches,
+                first = touches[0],
+                type = "";
+            switch (event.type) {
+                case "touchstart":
+                    type = "mousedown";
+                    break;
+                case "touchmove":
+                    type = "mousemove";
+                    break;
+                case "touchend":
+                    type = "mouseup";
+                    break;
+                default:
+                    return;
+            }
+
+            // initMouseEvent(type, canBubble, cancelable, view, clickCount, 
+            //                screenX, screenY, clientX, clientY, ctrlKey, 
+            //                altKey, shiftKey, metaKey, button, relatedTarget);
+
+            var simulatedEvent = document.createEvent("MouseEvent");
+            simulatedEvent.initMouseEvent(type, true, true, window, 1,
+                first.screenX, first.screenY,
+                first.clientX, first.clientY, false,
+                false, false, false, 0 /*left*/ , null);
+
+            first.target.dispatchEvent(simulatedEvent);
+        }
+
+        function init() {
+            console.log('convert touch to mouse');
+            document.addEventListener("touchstart", touchHandler, true);
+            document.addEventListener("touchmove", touchHandler, true);
+            document.addEventListener("touchend", touchHandler, true);
+            document.addEventListener("touchcancel", touchHandler, true);
+        }
+
+        if (Hilo.event.POINTER_START == "mousedown") {
+            init();
         }
 
         stage.enableDOMEvent(Hilo.event.POINTER_START, true)
@@ -279,61 +282,13 @@ export default class InitGame {
 
         optionList.forEach((optionContainer, index) => {
             // 修改层级
-            if (Hilo.event.POINTER_START == "touchstart") {
-                optionContainer.on('mousedown', () => {
-                    this.stage.removeChild(...optionList)
-                    this.stage.addChild(...[...optionList, optionContainer])
-                })
-            }
 
             optionContainer.on(Hilo.event.POINTER_START, () => {
-                    this.stage.removeChild(...optionList)
-                    this.stage.addChild(...[...optionList, optionContainer])
-                })
-                //拖拽释放
-            if (Hilo.event.POINTER_END == "touchend") {
-                optionContainer.on('mouseup', e => {
-                    const eX = e.stageX - 150
-                    const eY = e.stageY
-                    const text = optionContainer.getChildById('text').text
-                    this.myAnswer.forEach((answer, answerIndex) => {
-                        if (answer === text) { this.myAnswer[answerIndex] = '' }
-                    })
-                    const result = this.lineXY.some((item, i) => {
-                        const rule = (eX < item.x + 300 && eX > item.x - 100) && (eY > item.y - 45 && eY < item.y + 90)
-                        if (rule) {
-                            if (!this.myAnswer[i] || this.myAnswer[i] === text) {
-                                this.myAnswer[i] = text
-                                Hilo.Tween.to(optionContainer, { x: item.x, y: item.y }, { duration: 100, ease: Hilo.Ease.Quad.EaseIn })
-                            } else {
-                                const lastOption = optionList.filter((oValue, oIndex) => oValue.getChildById('text').text === this.myAnswer[i])[0]
-                                this.myAnswer[i] = text
-                                Hilo.Tween.to(optionContainer, { x: item.x, y: item.y }, { duration: 100, ease: Hilo.Ease.Quad.EaseIn })
-                                Hilo.Tween.to(lastOption, { x: lastOption.originX, y: lastOption.originY }, { alpha: 1, duration: 100, ease: Hilo.Ease.Quad.EaseIn })
-                                lastOption.answerResult = null
-                                lastOption.answerIndex = null
-                            }
-                        }
+                this.stage.removeChild(...optionList)
+                this.stage.addChild(...[...optionList, optionContainer])
+            })
 
-                        optionContainer.answerResult = this.myAnswer[i] === this.answer[i] ? 'yes' : 'no'
-                        optionContainer.answerIndex = i
-                        return rule
-                    })
-                    if (!result) {
-                        optionContainer.answerResult = null
-                        optionContainer.answerIndex = null
-                        Hilo.Tween.to(optionContainer, { x: optionContainer.originX, y: optionContainer.originY }, { duration: 100, ease: Hilo.Ease.Quad.EaseIn })
-                    }
-
-                    // 答完题显示提交
-                    if (this.myAnswer.every(answerVal => answerVal) && this.resultButtonContainer.visible === false) {
-                        this.submit.visible = true
-                    } else {
-                        this.submit.visible = false
-                    }
-
-                })
-            }
+            //拖拽释放
 
             optionContainer.on(Hilo.event.POINTER_END, e => {
                 const eX = e.stageX - 150
@@ -397,25 +352,6 @@ export default class InitGame {
             visible: false
         }).addTo(this.stage)
 
-        if (Hilo.event.POINTER_END == "touchend") {
-            restart.on('mouseup', e => {
-                this.resultButtonContainer.visible = false
-                this.myAnswer = this.myAnswer.map(item => '')
-                this.option = randomArr([...this.answer, ...this.similar])
-                this.optionList.forEach((item, index) => {
-                    item.answerIndex = null
-                    item.answerResult = null
-                    item.getChildById('text').text = this.option[index]
-                    item.getChildById('yes').visible = false
-                    item.getChildById('no').visible = false
-                    item.getChildById('blue').visible = false
-                    Hilo.Tween.to(item, { x: item.originX, y: item.originY }, { alpha: 1, duration: 100, ease: Hilo.Ease.Quad.EaseIn })
-                    item.startDrag([0, 0, 1920, 1080])
-                })
-
-            })
-        }
-
         restart.on(Hilo.event.POINTER_END, e => {
             this.resultButtonContainer.visible = false
             this.myAnswer = this.myAnswer.map(item => '')
@@ -432,23 +368,6 @@ export default class InitGame {
             })
 
         })
-
-        if (Hilo.event.POINTER_END == "touchend") {
-            result.on('mouseup', e => {
-                this.optionList.forEach((item, index) => {
-                    if (item.answerResult === 'no') {
-                        item.getChildById('no').visible = false
-                        item.getChildById('blue').visible = true
-
-                        const text = item.getChildById('text').text
-                        const rightText = this.answer[item.answerIndex]
-                        const changeOption = this.optionList.filter((option, i) => rightText === option.getChildById('text').text)[0]
-                        item.getChildById('text').text = rightText
-                        changeOption.getChildById('text').text = text
-                    }
-                })
-            })
-        }
 
         result.on(Hilo.event.POINTER_END, e => {
             this.optionList.forEach((item, index) => {

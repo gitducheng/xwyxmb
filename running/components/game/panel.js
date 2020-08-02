@@ -39,18 +39,6 @@ export default class Panel extends Hilo.Container {
         const { checkButton, checkButtonFalse } = this._tool
         checkButton.forEach((item, index) => {
             item.setImage(panel['对.png'].image, panel['对.png'].rect)
-            if (Hilo.event.POINTER_START == "touchstart") {
-                item.on('mousedown', (e) => {
-                    checkButtonFalse[index].setImage(
-                        panel['错.png'].image,
-                        panel['错.png'].rect
-                    )
-                    item.setImage(panel['对选中.png'].image, panel['对选中.png'].rect)
-                    const ti = this._activeContent[index][this._activeCount]
-                    ti.uCheck = '1'
-                    ti.isCood = ti.isCheck === 1 ? true : false
-                })
-            }
             item.on(Hilo.event.POINTER_START, (e) => {
                 checkButtonFalse[index].setImage(
                     panel['错.png'].image,
@@ -65,15 +53,6 @@ export default class Panel extends Hilo.Container {
 
         checkButtonFalse.forEach((item, index) => {
             item.setImage(panel['错.png'].image, panel['错.png'].rect)
-            if (Hilo.event.POINTER_START == "touchstart") {
-                item.on('mousedown', (e) => {
-                    checkButton[index].setImage(panel['对.png'].image, panel['对.png'].rect)
-                    item.setImage(panel['错选中.png'].image, panel['错选中.png'].rect)
-                    const ti = this._activeContent[index][this._activeCount]
-                    ti.uCheck = '2'
-                    ti.isCood = ti.isCheck === 2 ? true : false
-                })
-            }
 
             item.on(Hilo.event.POINTER_START, (e) => {
                 checkButton[index].setImage(panel['对.png'].image, panel['对.png'].rect)
@@ -353,11 +332,6 @@ export default class Panel extends Hilo.Container {
             rect: panelStop['暂停按钮.png'].rect,
             visible: true
         }).addTo(card)
-        if (Hilo.event.POINTER_START == "touchstart") {
-            stopBtn.on('mousedown', (e) => {
-                this.state = 'pause'
-            })
-        }
         stopBtn.on(Hilo.event.POINTER_START, (e) => {
             this.state = 'pause'
         })
@@ -405,26 +379,6 @@ export default class Panel extends Hilo.Container {
             visible: true
         }).addTo(pauseCard);
         [playBtn, reStart].forEach((item, index) => {
-            if (Hilo.event.POINTER_START == "touchstart") {
-                item.on('mousedown', (e) => {
-                    if (index > 0) {
-                        this.state = 'ready'
-                    } else {
-                        this.state = 'playing'
-                    }
-
-                    Hilo.Tween.to(
-                        pauseCard, {
-                            alpha: 0,
-                            y: -pauseCard.height
-                        }, {
-                            duration: 200,
-                            loop: false,
-                            onComplete: () => {}
-                        }
-                    )
-                })
-            }
             item.on(Hilo.event.POINTER_START, (e) => {
                 if (index > 0) {
                     this.state = 'ready'

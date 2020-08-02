@@ -53,11 +53,6 @@ export default class Card extends Hilo.Container {
             }
 
             // 正面点击事件
-            if (Hilo.event.POINTER_START == "touchstart") {
-                front.on('mousedown', (e) => {
-                    this.toggleTween(front, this.back)
-                })
-            }
             front.on(Hilo.event.POINTER_START, (e) => {
                 this.toggleTween(front, this.back)
             })
@@ -86,12 +81,6 @@ export default class Card extends Hilo.Container {
         }
 
         // 反面点击事件
-        if (Hilo.event.POINTER_START == "touchstart") {
-            back.on('mousedown', (e) => {
-                this.toggleTween(back, this.front)
-            })
-        }
-
         back.on(Hilo.event.POINTER_START, (e) => {
             this.toggleTween(back, this.front)
         })

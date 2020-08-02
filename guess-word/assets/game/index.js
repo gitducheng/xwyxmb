@@ -39,35 +39,12 @@ export default class InitGame {
 
             // 点击预览小图事件
             this.pArr.forEach((item, index) => {
-                    if (Hilo.event.POINTER_START == "touchstart") {
-                        item.on('mousedown', () => {
-                            this.activeIndex = index
-                            this.updateData()
-                        })
-                    }
                     item.on(Hilo.event.POINTER_START, () => {
                         this.activeIndex = index
                         this.updateData()
                     })
                 })
                 // 刷新按钮事件
-            if (Hilo.event.POINTER_START == "touchstart") {
-                this.refreshBtn.on('mousedown', e => {
-                    // 刷新选项
-                    this.questionList[this.activeIndex].option = this.questionList[this.activeIndex].getOption()
-                    this.questionList[this.activeIndex].myAnswer = []
-                        // 更新页面
-                    this.optionArr.forEach((item, index) => {
-                        item.getChildById('word').text = this.questionList[this.activeIndex].option[index]
-                    })
-                    this.answerArr.forEach((item, index) => {
-                        this.toggleOptionAnswer(item, false)
-                    })
-                    this.optionArr.forEach((item, index) => {
-                        this.toggleOptionAnswer(item, true)
-                    })
-                })
-            }
             this.refreshBtn.on(Hilo.event.POINTER_START, e => {
                     // 刷新选项
                     this.questionList[this.activeIndex].option = this.questionList[this.activeIndex].getOption()
@@ -84,19 +61,6 @@ export default class InitGame {
                     })
                 })
                 // 重新开始按钮事件
-            if (Hilo.event.POINTER_START == "touchstart") {
-                this.resetBtn.on('mousedown', e => {
-                    // 清空数据
-                    this.questionList[this.activeIndex].myAnswer = []
-                        // 更新页面
-                    this.answerArr.forEach((item, index) => {
-                        this.toggleOptionAnswer(item, false)
-                    })
-                    this.optionArr.forEach((item, index) => {
-                        this.toggleOptionAnswer(item, true)
-                    })
-                })
-            }
             this.resetBtn.on(Hilo.event.POINTER_START, e => {
                     // 清空数据
                     this.questionList[this.activeIndex].myAnswer = []
@@ -110,44 +74,6 @@ export default class InitGame {
                 })
                 // 点击选项事件
             this.optionArr.forEach((item, index) => {
-                    if (Hilo.event.POINTER_START == "touchstart") {
-                        item.on('mousedown', e => {
-                            const myAnswer = this.questionList[this.activeIndex].myAnswer
-                            const answer = this.questionList[this.activeIndex].answer
-
-                            const bgColor = item.getChildById('bgColor')
-                            const word = item.getChildById('word')
-
-                            // 如果已经空了直接返回
-                            if (!bgColor.visible && !word.visible) { return false }
-                            // 找到答案的空框编号
-                            let answerIndex = null
-                            answer.forEach((item, index) => {
-                                if (!myAnswer[index] && answerIndex === null) { answerIndex = index }
-                            })
-                            if (!bgColor || !word || answerIndex === null) { return false }
-
-                            // 隐藏当前点击的选项
-                            bgColor.visible = false
-                            word.visible = false
-
-                            // 更新答案 并展示对应项
-                            myAnswer[answerIndex] = word.text
-                            this.answerArr[answerIndex].getChildById('word').text = word.text
-                            this.answerArr[answerIndex].getChildById('bgColor').visible = true
-                            this.answerArr[answerIndex].getChildById('word').visible = true
-
-                            // 如果答完当前题目，进入下一题
-                            if (answer.length === myAnswer.length && myAnswer.every(item => item)) {
-                                const index = this.activeIndex + 1
-                                if (index < this.questionList.length) {
-                                    this.activeIndex = index
-                                    this.updateData()
-                                }
-                            }
-
-                        })
-                    }
                     item.on(Hilo.event.POINTER_START, e => {
                         const myAnswer = this.questionList[this.activeIndex].myAnswer
                         const answer = this.questionList[this.activeIndex].answer
@@ -186,11 +112,6 @@ export default class InitGame {
                     })
                 })
                 // 提交按钮事件
-            if (Hilo.event.POINTER_START == "touchstart") {
-                this.commitBtn.on('mousedown', e => {
-                    this.initConfirm()
-                })
-            }
             this.commitBtn.on(Hilo.event.POINTER_START, e => {
                 this.initConfirm()
             })
@@ -252,10 +173,47 @@ export default class InitGame {
         }
 
         //绑定交互事件
-        if (Hilo.event.POINTER_START == "touchstart") {
-            stage.enableDOMEvent('mousedown', true)
-            stage.enableDOMEvent('mousemove', true)
-            stage.enableDOMEvent('mouseup', true)
+        function touchHandler(event) {
+            var touches = event.changedTouches,
+                first = touches[0],
+                type = "";
+            switch (event.type) {
+                case "touchstart":
+                    type = "mousedown";
+                    break;
+                case "touchmove":
+                    type = "mousemove";
+                    break;
+                case "touchend":
+                    type = "mouseup";
+                    break;
+                default:
+                    return;
+            }
+
+            // initMouseEvent(type, canBubble, cancelable, view, clickCount, 
+            //                screenX, screenY, clientX, clientY, ctrlKey, 
+            //                altKey, shiftKey, metaKey, button, relatedTarget);
+
+            var simulatedEvent = document.createEvent("MouseEvent");
+            simulatedEvent.initMouseEvent(type, true, true, window, 1,
+                first.screenX, first.screenY,
+                first.clientX, first.clientY, false,
+                false, false, false, 0 /*left*/ , null);
+
+            first.target.dispatchEvent(simulatedEvent);
+        }
+
+        function init() {
+            console.log('convert touch to mouse');
+            document.addEventListener("touchstart", touchHandler, true);
+            document.addEventListener("touchmove", touchHandler, true);
+            document.addEventListener("touchend", touchHandler, true);
+            document.addEventListener("touchcancel", touchHandler, true);
+        }
+
+        if (Hilo.event.POINTER_START == "mousedown") {
+            init();
         }
 
         stage.enableDOMEvent(Hilo.event.POINTER_START, true)
@@ -480,40 +438,10 @@ export default class InitGame {
         })
         const enlargeBg = new Hilo.Container({ width: this.stage.width, height: this.stage.height, x: 0, y: 0, background: '#000', alpha: 0.7 })
 
-        if (Hilo.event.POINTER_START == "touchstart") {
-            close.on('mousedown', () => {
-                this.stage.removeChild(enlargeContainer)
-            })
-        }
         close.on(Hilo.event.POINTER_START, () => {
             this.stage.removeChild(enlargeContainer)
         })
 
-        if (Hilo.event.POINTER_START == "touchstart") {
-            enlarge.on('mousedown', (e) => {
-                if (activeQuestion.tag !== 'img') { return false }
-                const newFile = new Hilo.Bitmap()
-                Hilo.copy(newFile, this.fileContent)
-
-                newFile.align = Hilo.align.CENTER
-                const img = new Image()
-                img.src = activeQuestion.content
-                const { width, height } = img
-                if (width > height) {
-                    newFile.width = this.stage.width / 3 * 2
-                    newFile.height = newFile.width / width * height
-                } else {
-                    newFile.height = this.stage.height / 3 * 2
-                    newFile.width = newFile.height / height * width
-                }
-
-                close.x = (this.stage.width - newFile.width) / 2 + newFile.width - close.width / 2
-                close.y = (this.stage.height - newFile.height) / 2 - close.height / 2
-                enlargeContainer.addChild(enlargeBg, newFile, close)
-                this.stage.addChild(enlargeContainer)
-
-            })
-        }
         enlarge.on(Hilo.event.POINTER_START, (e) => {
             if (activeQuestion.tag !== 'img') { return false }
             const newFile = new Hilo.Bitmap()
@@ -622,24 +550,6 @@ export default class InitGame {
 
 
             // 添加事件
-            if (Hilo.event.POINTER_START == "touchstart") {
-                box.on('mousedown', e => {
-                    const activeAnswer = this.questionList[this.activeIndex].myAnswer
-                    if (!activeAnswer[index]) { return false }
-                    // 消除对应答案项
-                    activeAnswer[index] = ''
-                    const answerWord = this.answerArr[index].getChildById('word')
-                    this.answerArr[index].getChildById('bgColor').visible = false
-                    answerWord.visible = false
-
-                    // 对应options展示
-                    const option = this.optionArr.filter((item, index) => answerWord.text === item.getChildById('word').text)
-                    if (option.length) {
-                        option[0].getChildById('word').visible = true
-                        option[0].getChildById('bgColor').visible = true
-                    }
-                })
-            }
             box.on(Hilo.event.POINTER_START, e => {
                 const activeAnswer = this.questionList[this.activeIndex].myAnswer
                 if (!activeAnswer[index]) { return false }
@@ -712,15 +622,6 @@ export default class InitGame {
 
         const confirmContainer = new Hilo.Container({ children: [confirm, cancel, yes] })
 
-        if (Hilo.event.POINTER_START == "touchstart") {
-            yes.on('mousedown', e => {
-                this.stage.removeChild(confirmContainer)
-                const wrongArr = this.questionList.filter((item) => item.answer.join('') !== item.myAnswer.join(''))
-                this.initResultTip(!wrongArr.length)
-                    // 计时器停止
-                this.timeStart = false
-            })
-        }
         yes.on(Hilo.event.POINTER_START, e => {
             this.stage.removeChild(confirmContainer)
             const wrongArr = this.questionList.filter((item) => item.answer.join('') !== item.myAnswer.join(''))
@@ -729,11 +630,6 @@ export default class InitGame {
             this.timeStart = false
         })
 
-        if (Hilo.event.POINTER_START == "touchstart") {
-            cancel.on('mousedown', e => {
-                this.stage.removeChild(confirmContainer)
-            })
-        }
         cancel.on(Hilo.event.POINTER_START, e => {
             this.stage.removeChild(confirmContainer)
         })
@@ -784,32 +680,10 @@ export default class InitGame {
         const resultDataContainer = new Hilo.Container({ children: [bg, back, restart, ...result] }).addTo(this.stage)
 
         // 按钮事件
-        if (Hilo.event.POINTER_START == "touchstart") {
-            back.on('mousedown', e => {
-                this.stage.removeChild(resultDataContainer)
-            })
-        }
         back.on(Hilo.event.POINTER_START, e => {
             this.stage.removeChild(resultDataContainer)
         })
 
-        if (Hilo.event.POINTER_START == "touchstart") {
-            restart.on('mousedown', e => {
-                this.activeIndex = 0
-                this.questionList.forEach((item, index) => {
-                        item.myAnswer = []
-                    })
-                    // 所有选项重新排
-                this.questionList.forEach(item => {
-                    item.option = item.getOption()
-                })
-                this.updateData()
-                this.stage.removeChild(resultDataContainer)
-                    // 重新计时
-                this.timeCount = 0
-                this.timeStart = true
-            })
-        }
         restart.on(Hilo.event.POINTER_START, e => {
             this.activeIndex = 0
             this.questionList.forEach((item, index) => {
