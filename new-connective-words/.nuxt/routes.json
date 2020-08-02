@@ -1,0 +1,16 @@
+[
+  {
+    "name": "config",
+    "path": "/config",
+    "component": "D:\\\\xwyxmb\\\\new-connective-words\\\\pages\\\\config.vue",
+    "chunkName": "pages/config",
+    "_name": "_73baa968"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "D:\\\\xwyxmb\\\\new-connective-words\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_7f5b741c"
+  }
+]
