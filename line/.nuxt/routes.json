@@ -2,15 +2,15 @@
   {
     "name": "config",
     "path": "/config",
-    "component": "C:\\\\Users\\\\Administrator\\\\Desktop\\\\20200705\\\\20200729\\\\xwyxmb\\\\line\\\\pages\\\\config.vue",
+    "component": "D:\\\\xwyxmb\\\\line\\\\pages\\\\config.vue",
     "chunkName": "pages/config",
-    "_name": "_1f2ea8db"
+    "_name": "_7c1d38ab"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\Users\\\\Administrator\\\\Desktop\\\\20200705\\\\20200729\\\\xwyxmb\\\\line\\\\pages\\\\index.vue",
+    "component": "D:\\\\xwyxmb\\\\line\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
-    "_name": "_0eff8b6e"
+    "_name": "_5e987079"
   }
 ]

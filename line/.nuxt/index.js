@@ -11,7 +11,7 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
-import nuxt_plugin_axios_644ba65b from 'nuxt_plugin_axios_644ba65b' // Source: .\\axios.js (mode: 'all')
+import nuxt_plugin_axios_1624b3fb from 'nuxt_plugin_axios_1624b3fb' // Source: .\\axios.js (mode: 'all')
 import nuxt_plugin_elementui_d905880e from 'nuxt_plugin_elementui_d905880e' // Source: ..\\plugins\\element-ui (mode: 'all')
 import nuxt_plugin_util_6a876078 from 'nuxt_plugin_util_6a876078' // Source: ..\\plugins\\util (mode: 'client')
 
@@ -52,7 +52,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"test","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"```bash\r # install dependencies\r $ yarn install"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"style":[],"script":[]},
+    head: {"title":"test","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"## Build Setup"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"style":[],"script":[]},
 
     router,
     nuxt: {
@@ -166,8 +166,8 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_axios_644ba65b === 'function') {
-    await nuxt_plugin_axios_644ba65b(app.context, inject)
+  if (typeof nuxt_plugin_axios_1624b3fb === 'function') {
+    await nuxt_plugin_axios_1624b3fb(app.context, inject)
   }
 
   if (typeof nuxt_plugin_elementui_d905880e === 'function') {
