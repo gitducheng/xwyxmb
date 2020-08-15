@@ -1,0 +1,49 @@
+@import "var";
+
+@mixin generateButton($color, $color-invert: '', $type: 'filled') {
+  border: 1px solid transparent;
+  min-width: 80px;
+  display: inline-block;
+  border-radius: $radius;
+  cursor: pointer;
+
+  @if $type == 'filled' {
+    $background: $color;
+    $text-color: $color-invert;
+
+    background-color: $background;
+    color: $text-color;
+
+    &:hover {
+      background-color: darken($background, 7.5%);
+    }
+
+    &:active {
+      background-color: darken($background, 10%);
+    }
+  }
+  @if $type == 'outlined' {
+    $background: #ffffff;
+    $text-color: $color-invert;
+
+    background-color: transparent;
+    border-color: $color;
+    color: $color-invert;
+
+    &:hover {
+      background-color: darken($background, 7.5%);
+    }
+
+    &:active {
+      background-color: darken($background, 10%);
+    }
+  }
+}
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: " ";
+    display: table;
+  }
+}

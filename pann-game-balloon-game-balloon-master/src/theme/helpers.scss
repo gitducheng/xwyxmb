@@ -1,0 +1,64 @@
+@import "mixins";
+
+$gaps: ("0": 0, "4": 4px, "8": 8px, "12": 12px, "16": 16px, "20": 20px, "24": 24px, "32": 32px, "40": 40px) !default;
+@each $name, $gap in $gaps {
+
+  .is-margin-#{$name} {
+    margin: $gap !important;;
+  }
+  .is-mt-#{$name} {
+    margin-top: $gap !important;
+  }
+  .is-mb-#{$name} {
+    margin-bottom: $gap !important;
+  }
+  .is-ml-#{$name} {
+    margin-left: $gap !important;
+  }
+  .is-mr-#{$name} {
+    margin-right: $gap !important;
+  }
+  .is-padding-#{$name} {
+    padding: $gap !important;;
+  }
+  .is-pt-#{$name} {
+    padding-top: $gap !important;
+  }
+  .is-pb-#{$name} {
+    padding-bottom: $gap !important;
+  }
+  .is-pl-#{$name} {
+    padding-left: $gap !important;
+  }
+  .is-pr-#{$name} {
+    padding-right: $gap !important;
+  }
+}
+
+.is-fullwidth {
+  width: 100%;
+}
+
+$displays: "block" "flex" "inline" "inline-block" "inline-flex";
+
+@each $display in $displays {
+  .is-#{$display} {
+    display: #{$display} !important;
+  }
+}
+
+.is-clearfix {
+  @include clearfix;
+}
+
+.is-pulled-left {
+  float: left;
+}
+
+.is-pulled-right {
+  float: right;
+}
+
+.is-vertical-centered {
+  vertical-align: middle;
+}

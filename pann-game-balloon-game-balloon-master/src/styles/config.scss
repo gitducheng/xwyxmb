@@ -1,0 +1,58 @@
+@import "../theme/var";
+
+.config {
+  background: #ffffff;
+  width: 800px;
+  font-size: 16px;
+  margin: 0 auto;
+  //border: 1px solid $border-color;
+  padding: 20px;
+
+  &__header {
+    font-size: 16px;
+    font-weight: bold;
+    color: $text-title-color;
+    text-align: center;
+  }
+
+  &__body {
+    margin-top: 50px;
+  }
+
+  &__item {
+    margin-bottom: 40px;
+  }
+
+  &__label {
+    min-width: 100px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__subject {
+    min-width: 472px;
+  }
+
+  &__count {
+    color: $primary-color;
+  }
+
+  &__footer {
+    //text-align: right;
+    height: 36px;
+    line-height: 36px;
+  }
+
+  &__actions {
+    float: right;
+  }
+
+  &-meta {
+    display: inline-block;
+
+    &__select {
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+  }
+}

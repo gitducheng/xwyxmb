@@ -1,0 +1,10 @@
+@import "../theme/var";
+
+.app-home {
+  .container {
+    > canvas, > div {
+      left: 0;
+      top: 0;
+    }
+  }
+}
