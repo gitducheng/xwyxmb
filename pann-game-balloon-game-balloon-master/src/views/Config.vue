@@ -25,7 +25,7 @@
         <div class="config__content">
           <tag-input
             v-model="rightList"
-            :max-text-length="3"
+            :max-text-length="10"
             class="is-mt-8"
           />
         </div>
@@ -38,7 +38,7 @@
         <div class="config__content">
           <tag-input
             v-model="mixedList"
-            :max-text-length="3"
+            :max-text-length="10"
             :max="10"
             class="is-mt-8"
           />

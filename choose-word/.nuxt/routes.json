@@ -3,14 +3,12 @@
     "name": "config",
     "path": "/config",
     "component": "D:\\\\xwyxmb\\\\choose-word\\\\pages\\\\config.vue",
-    "chunkName": "pages/config",
-    "_name": "_40851bfd"
+    "chunkName": "pages/config"
   },
   {
     "name": "index",
     "path": "/",
     "component": "D:\\\\xwyxmb\\\\choose-word\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_22dddae7"
+    "chunkName": "pages/index"
   }
 ]

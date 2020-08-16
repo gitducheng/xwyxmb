@@ -5,7 +5,7 @@
     "LICENSES",
     "app.6e85323.js",
     "commons/app.f758969.js",
-    "commons/config~index.3320914.js",
+    "commons/config~index.818ffbe.js",
     "config.559c743.js",
     "fonts/element-icons.535877f.woff",
     "fonts/element-icons.732389d.ttf",
@@ -27,17 +27,17 @@
     "img/submit.bdc2329.png",
     "img/title.f334a9e.png",
     "index.cc35788.js",
-    "runtime.f68c298.js",
+    "runtime.c3fd837.js",
     "vendors~app.84b6907.js"
   ],
   "initial": [
-    "runtime.f68c298.js",
+    "runtime.c3fd837.js",
     "commons/app.f758969.js",
     "vendors~app.84b6907.js",
     "app.6e85323.js"
   ],
   "async": [
-    "commons/config~index.3320914.js",
+    "commons/config~index.818ffbe.js",
     "config.559c743.js",
     "index.cc35788.js"
   ],
@@ -2080,7 +2080,7 @@
       "commons/app.f758969.js"
     ],
     "5fb6fc93": [
-      "commons/config~index.3320914.js"
+      "commons/config~index.818ffbe.js"
     ],
     "6dcebeb8": [
       "config.559c743.js"
@@ -2089,7 +2089,7 @@
       "index.cc35788.js"
     ],
     "6fca0322": [
-      "runtime.f68c298.js"
+      "runtime.c3fd837.js"
     ],
     "7ec635d8": [
       "vendors~app.84b6907.js"

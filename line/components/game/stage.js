@@ -57,9 +57,9 @@ export default function initStage() {
         document.addEventListener("touchcancel", touchHandler, true);
     }
 
-    if (Hilo.event.POINTER_START == "mousedown") {
-        init();
-    }
+    // if (Hilo.event.POINTER_START == "mousedown") {
+    //     init();
+    // }
 
     stage.enableDOMEvent(Hilo.event.POINTER_START, true)
     stage.enableDOMEvent(Hilo.event.POINTER_MOVE, true)
