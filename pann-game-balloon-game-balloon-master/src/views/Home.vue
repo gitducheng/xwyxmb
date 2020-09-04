@@ -1,17 +1,15 @@
 <template>
-  <div
-    class="app-home"
-  >
+  <div class="app-home">
     <div
-      ref="container"
-      class="container"
-    />
+ref="container"
+         class="container"
+/>
     <result
-      v-if="resultVisible"
-      :config="config"
-      :score="score"
-      @back2score="back2score"
-    />
+v-if="resultVisible"
+            :config="config"
+            :score="score"
+            @back2score="back2score"
+/>
   </div>
 </template>
 

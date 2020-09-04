@@ -1,45 +1,45 @@
 <template>
   <div
-    class="tag-input"
-    :class="{'is-focus': focusing}"
-    @click="handleWrapClick"
-  >
+class="tag-input"
+       :class="{'is-focus': focusing}"
+       @click="handleWrapClick"
+>
     <span
-      v-if="placeholderVisible"
-      class="tag-input__placeholder"
-    >
+v-if="placeholderVisible"
+          class="tag-input__placeholder"
+>
       单击输入，按【回车键】添加
     </span>
     <div
-      v-for="(tag, index) in tags"
-      :key="index"
-      class="tag-input__item"
-      @click.prevent.stop
-    >
+v-for="(tag, index) in tags"
+         :key="index"
+         class="tag-input__item"
+         @click.prevent.stop
+>
       <span class="tag-input__item-text">{{ tag }}</span>
       <span
-        class="tag-input__item-close"
-        @click="handleRemoveItem(index)"
-      >×</span>
+class="tag-input__item-close"
+            @click="handleRemoveItem(index)"
+>×</span>
     </div>
     <div
-      class="is-inline-block"
-      style="max-width: 100%;"
-      :style="{width: inputInnerWidth + 'px'}"
-    >
+class="is-inline-block"
+         style="max-width: 100%;"
+         :style="{width: inputInnerWidth + 'px'}"
+>
       <input
-        ref="inputInner"
-        v-model="inputValue"
-        type="text"
-        class="tag-input__inner"
-        @blur="focusing = false"
-        @focus="focusing = true"
-        @keydown.enter="handleInputEnter"
-        @keydown.delete="handleInputDelete"
-        @input="handleInputChange"
-        @compositionstart="compositing=true"
-        @compositionend="compositing=false"
-      >
+ref="inputInner"
+             v-model="inputValue"
+             type="text"
+             class="tag-input__inner"
+             @blur="focusing = false"
+             @focus="focusing = true"
+             @keydown.enter="handleInputEnter"
+             @keydown.delete="handleInputDelete"
+             @input="handleInputChange"
+             @compositionstart="compositing=true"
+             @compositionend="compositing=false"
+>
     </div>
   </div>
 </template>
@@ -68,6 +68,7 @@ export default {
       compositing: false,
       focusing: false,
       inputComposedValue: '', // 拼写长度，用户计算输入框宽度
+      tipShow: '',
     }
   },
   computed: {
@@ -95,12 +96,17 @@ export default {
     },
     inputValue(value, oldValue) {
       if (value.length > this.maxTextLength) {
-        new Noty({
-          type: 'warning',
-          text: `选项不能超过${this.maxTextLength}个字`,
-          layout: 'topCenter',
-          timeout: 2000,
-        }).show()
+        if (!this.tipShow) {
+          new Noty({
+            type: 'warning',
+            text: `选项不能超过${this.maxTextLength}个字`,
+            layout: 'topCenter',
+            timeout: 2000,
+          }).show()
+          this.tipShow = setTimeout(() => {
+            this.tipShow = ''
+          }, 2000)
+        }
         if (oldValue.length === this.maxTextLength) {
           // 禁止任何输入
           this.inputValue = oldValue
@@ -126,12 +132,17 @@ export default {
         return
       }
       if (this.tags.length >= this.max) {
-        new Noty({
-          type: 'warning',
-          text: `选项不能超过${this.max}个`,
-          layout: 'topCenter',
-          timeout: 2000,
-        }).show()
+        if (!this.tipShow) {
+          new Noty({
+            type: 'warning',
+            text: `选项不能超过${this.max}个`,
+            layout: 'topCenter',
+            timeout: 2000,
+          }).show()
+          this.tipShow = setTimeout(() => {
+            this.tipShow = ''
+          }, 2000)
+        }
         return
       }
       if (this.inputValue.trim().length > this.maxTextLength) {

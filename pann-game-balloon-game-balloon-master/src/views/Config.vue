@@ -10,11 +10,11 @@
         </div>
         <div class="config__content is-inline">
           <input
-            v-model="subject"
-            class="config__subject"
-            type="text"
-            placeholder="单击输入主题内容"
-          >
+v-model="subject"
+                 class="config__subject"
+                 type="text"
+                 placeholder="单击输入主题内容"
+>
         </div>
       </div>
       <div class="config__item">
@@ -24,10 +24,10 @@
         </div>
         <div class="config__content">
           <tag-input
-            v-model="rightList"
-            :max-text-length="10"
-            class="is-mt-8"
-          />
+v-model="rightList"
+                     :max-text-length="10"
+                     class="is-mt-8"
+/>
         </div>
       </div>
       <div class="config__item">
@@ -37,11 +37,11 @@
         </div>
         <div class="config__content">
           <tag-input
-            v-model="mixedList"
-            :max-text-length="10"
-            :max="10"
-            class="is-mt-8"
-          />
+v-model="mixedList"
+                     :max-text-length="10"
+                     :max="10"
+                     class="is-mt-8"
+/>
         </div>
       </div>
       <div class="config__footer is-clearfix">
@@ -50,14 +50,14 @@
             游戏难度：
           </span>
           <select
-            v-model="difficulty"
-            class="config-meta__content config-meta__select"
-          >
+v-model="difficulty"
+                  class="config-meta__content config-meta__select"
+>
             <option
-              v-for="o in difficultyOptions"
-              :key="o.value"
-              :value="o.value"
-            >
+v-for="o in difficultyOptions"
+                    :key="o.value"
+                    :value="o.value"
+>
               {{ o.label }}
             </option>
           </select>
@@ -72,16 +72,16 @@
         </div>
         <div class="config__actions">
           <button
-            class="button is-outlined is-mr-16"
-            @click="handleImportExample"
-          >
+class="button is-outlined is-mr-16"
+                  @click="handleImportExample"
+>
             导入范例
           </button>
           <button
-            class="button is-primary"
-            :disabled="submitting"
-            @click="handleSubmit"
-          >
+class="button is-primary"
+                  :disabled="submitting"
+                  @click="handleSubmit"
+>
             完成
           </button>
         </div>
@@ -111,6 +111,7 @@ export default {
         { value: 3, label: '高' },
       ],
       submitting: false,
+      tipShow: '',
     }
   },
   computed: {
@@ -131,12 +132,17 @@ export default {
   watch: {
     subject(val, oldVal) {
       if (val.length > 10) {
-        new Noty({
-          type: 'warning',
-          text: '主题不能超过10个字',
-          layout: 'topCenter',
-          timeout: 2000,
-        }).show()
+        if (!this.tipShow) {
+          new Noty({
+            type: 'warning',
+            text: '主题不能超过10个字',
+            layout: 'topCenter',
+            timeout: 2000,
+          }).show()
+          this.tipShow = setTimeout(() => {
+            this.tipShow = ''
+          }, 2000)
+        }
         if (oldVal.length === 10) {
           // 禁止任何输入
           this.subject = oldVal
