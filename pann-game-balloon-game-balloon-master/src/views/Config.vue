@@ -9,12 +9,10 @@
           互动主题：
         </div>
         <div class="config__content is-inline">
-          <input
-v-model="subject"
+          <input v-model="subject"
                  class="config__subject"
                  type="text"
-                 placeholder="单击输入主题内容"
->
+                 placeholder="单击输入主题内容">
         </div>
       </div>
       <div class="config__item">
@@ -23,11 +21,9 @@ v-model="subject"
           <span class="config__count">{{ rightList.length }}</span>/20
         </div>
         <div class="config__content">
-          <tag-input
-v-model="rightList"
+          <tag-input v-model="rightList"
                      :max-text-length="10"
-                     class="is-mt-8"
-/>
+                     class="is-mt-8" />
         </div>
       </div>
       <div class="config__item">
@@ -36,12 +32,10 @@ v-model="rightList"
           <span class="config__count">{{ mixedList.length }}</span>/10
         </div>
         <div class="config__content">
-          <tag-input
-v-model="mixedList"
+          <tag-input v-model="mixedList"
                      :max-text-length="10"
                      :max="10"
-                     class="is-mt-8"
-/>
+                     class="is-mt-8" />
         </div>
       </div>
       <div class="config__footer is-clearfix">
@@ -49,15 +43,11 @@ v-model="mixedList"
           <span class="config-meta__label">
             游戏难度：
           </span>
-          <select
-v-model="difficulty"
-                  class="config-meta__content config-meta__select"
->
-            <option
-v-for="o in difficultyOptions"
+          <select v-model="difficulty"
+                  class="config-meta__content config-meta__select">
+            <option v-for="o in difficultyOptions"
                     :key="o.value"
-                    :value="o.value"
->
+                    :value="o.value">
               {{ o.label }}
             </option>
           </select>
@@ -71,22 +61,19 @@ v-for="o in difficultyOptions"
           </span>
         </div>
         <div class="config__actions">
-          <button
-class="button is-outlined is-mr-16"
-                  @click="handleImportExample"
->
+          <button class="button is-outlined is-mr-16"
+                  @click="handleImportExample">
             导入范例
           </button>
-          <button
-class="button is-primary"
+          <button class="button is-primary"
                   :disabled="submitting"
-                  @click="handleSubmit"
->
+                  @click="handleSubmit">
             完成
           </button>
         </div>
       </div>
     </div>
+
   </div>
 </template>
 <script>
@@ -97,9 +84,15 @@ import example from '../example.json'
 import cloneDeep from 'lodash/cloneDeep'
 import { load, save } from '../utils/container'
 
+import DifficultyScene from '../game/sence/difficulty'
+// import PlayingScene from '../game/sence/playing'
+import { gameWidth, gameHeight } from '../game/utils/constants'
+import loadAssets from '../game/utils/loadAssets'
+import Hilo from 'hilojs'
+
 export default {
   components: { TagInput },
-  data() {
+  data () {
     return {
       subject: '',
       rightList: [],
@@ -112,10 +105,12 @@ export default {
       ],
       submitting: false,
       tipShow: '',
+      config: '',
+      assets: ''
     }
   },
   computed: {
-    duration() {
+    duration () {
       // 高难度：5秒+个数*1.75，中难度：7秒+个数*2.25，低难度：8秒+个数*3.25；秒数四舍五入，
       // 比如只有一个元素的时候高难度7秒，中难度9秒，低难度11秒；
       const count = this.rightList.length + this.mixedList.length
@@ -130,7 +125,7 @@ export default {
     },
   },
   watch: {
-    subject(val, oldVal) {
+    subject (val, oldVal) {
       if (val.length > 10) {
         if (!this.tipShow) {
           new Noty({
@@ -153,7 +148,7 @@ export default {
       }
     },
   },
-  created() {
+  created () {
     load().then((data) => {
       if (!isEmpty(data)) {
         this.subject = data.subject
@@ -166,13 +161,13 @@ export default {
     })
   },
   methods: {
-    handleImportExample() {
+    handleImportExample () {
       const { subject, rightList, mixedList } = cloneDeep(example)
       this.subject = subject
       this.rightList = rightList
       this.mixedList = mixedList
     },
-    error(msg) {
+    error (msg) {
       new Noty({
         type: 'warning',
         text: msg,
@@ -180,7 +175,7 @@ export default {
         timeout: 2000,
       }).show()
     },
-    handleSubmit() {
+    async handleSubmit () {
       if (!this.subject.trim()) {
         this.error('请填写互动主题')
         return
@@ -195,18 +190,62 @@ export default {
         return
       }
       this.submitting = true
-      // TODO 设置封面
-      save('', {
-        subject: this.subject.trim(),
-        rightList: this.rightList,
-        mixedList: this.mixedList,
-        duration: this.duration,
-        difficulty: this.difficulty,
-      }).then(() => {
-        this.$router.push({ name: 'Home' })
-      }, (err) => {
-        this.error(err.toString())
+      //
+      // 加载静态资源
+      await loadAssets().then((result) => {
+        this.assets = result
       })
+      let aaa = document.getElementById("aaa")
+      var stage = new Hilo.Stage({
+        id: 'scene',
+        renderType: 'canvas',
+        // renderType: 'dom',
+        container: this.$refs.aaa,
+        width: gameWidth,
+        height: gameHeight,
+        scaleX: innerWidth / gameWidth,
+        scaleY: innerHeight / gameHeight,
+        visible: true
+      })
+      // 启动计时器
+      const ticker = new Hilo.Ticker(60);
+      ticker.addTick(stage);
+      ticker.start(true);
+      const bgImg = this.assets.getContent('bg')
+      new Hilo.Bitmap({
+        id: 'bg',
+        image: bgImg,
+      }).addTo(stage)
+
+      new DifficultyScene({
+        id: "difficultyScene",
+        width: gameWidth,
+        height: gameHeight,
+        assets: this.assets,
+        config: {
+          subject: this.subject.trim(),
+          rightList: this.rightList,
+          mixedList: this.mixedList,
+          duration: this.duration,
+          difficulty: this.difficulty,
+        },
+        visible: true
+      }).addTo(stage);
+
+      setTimeout(() => {
+        // TODO 设置封面
+        save(stage.canvas.toDataURL() | '', {
+          subject: this.subject.trim(),
+          rightList: this.rightList,
+          mixedList: this.mixedList,
+          duration: this.duration,
+          difficulty: this.difficulty,
+        }).then(() => {
+          this.$router.push({ name: 'Home' })
+        }, (err) => {
+          this.error(err.toString())
+        })
+      }, 200)
     },
   },
 }
