@@ -234,7 +234,7 @@ export default {
 
       setTimeout(() => {
         // TODO 设置封面
-        save(stage.canvas.toDataURL() | '', {
+        save(stage.canvas.toDataURL() || '', {
           subject: this.subject.trim(),
           rightList: this.rightList,
           mixedList: this.mixedList,
