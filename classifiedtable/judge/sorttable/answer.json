@@ -1,0 +1,79 @@
+{
+  "tableHead": ["", "奇数", "偶数"],
+  "tableBody": [
+    { 
+      "bodyTitle": "7的倍数",
+      "result1": [
+        {
+          "id": 1,
+          "position": 22,
+          "val": "7"
+        },
+        {
+          "id": 2,
+          "position": 22,
+          "val": "21"
+        },
+        {
+          "id": 3,
+          "position": 22,
+          "val": "35"
+        }
+      ],
+      "result2": [
+        {
+          "id": 4,
+          "position": 23,
+          "val": "14"
+        },
+        {
+          "id": 5,
+          "position": 23,
+          "val": "28"
+        },
+        {
+          "id": 6,
+          "position": 23,
+          "val": "42"
+        }
+      ]
+    },
+    { 
+      "bodyTitle": "9的倍数",
+      "result1": [
+        {
+          "id": 7,
+          "position": 32,
+          "val": "9"
+        },
+        {
+          "id": 8,
+          "position": 32,
+          "val": "27"
+        },
+        {
+          "id": 9,
+          "position": 32,
+          "val": "45"
+        }
+      ],
+      "result2": [
+        {
+          "id": 10,
+          "position": 33,
+          "val": "18"
+        },
+        {
+          "id": 11,
+          "position": 33,
+          "val": "36"
+        },
+        {
+          "id": 12,
+          "position": 33,
+          "val": "54"
+        }
+      ]
+    }
+  ]
+}
