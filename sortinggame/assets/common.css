@@ -1,0 +1,30 @@
+.icon-submit {
+  background: url('../static/img/submit.png') center no-repeat;
+  width: 15.9rem;
+  height: 4.5rem;
+}
+.icon-close {
+  background: url('../static/img/close.png') center no-repeat;
+  width: 4.2rem;
+  height: 4.5rem;
+}
+.icon-parse {
+  background: url('../static/img/parse.png') center no-repeat;
+  width: 5.8rem;
+  height: 3rem;
+}
+.icon-tip {
+  background: url('../static/img/tip.png') center no-repeat;
+  width: 5.8rem;
+  height: 3rem;
+}
+.icon-restart {
+  background: url('../static/img/restart.png') center no-repeat;
+  width: 15.9rem;
+  height: 4.5rem;
+}
+.icon-result {
+  background: url('../static/img/result.png') center no-repeat;
+  width: 9.25rem;
+  height: 3rem;
+}

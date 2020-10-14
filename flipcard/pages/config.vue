@@ -139,7 +139,8 @@ export default{
       }
       const configData = {
         title: this.titleVal,
-        data: this.configData
+        data: this.configData,
+        name: 'flipcard'
       }
       try {
         const thumbnail = await save(configData)
@@ -229,7 +230,7 @@ export default{
     top: 0px;
     right: 0;
     margin-top: 10px;
-    margin-right: 20px;
+    margin-right: 150px;
     text-align: right;
     .el-button--info {
       background: #ccc;

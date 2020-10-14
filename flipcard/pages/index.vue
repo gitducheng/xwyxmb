@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div class="container" ref="container"></div>
+    <div class="container"
+         ref="container"></div>
   </div>
 </template>
 
@@ -13,10 +14,10 @@ import Panel from '~/components/game/panel'
 import Title from '~/components/game/title'
 
 export default {
-  data() {
+  data () {
     return {}
   },
-  async mounted() {
+  async mounted () {
     let configData
     try {
       configData = await this.$testload()
@@ -26,7 +27,7 @@ export default {
     } catch (error) {
       configData = JSON.parse(localStorage.getItem('configData') || null)
     }
-    if (!configData) return this.$router.replace('/config')
+    if (!configData || configData.name !== 'flipcard') return this.$router.replace('/config')
     this.questions = configData.data
 
     // const  // 接入hilo动画引擎
@@ -61,11 +62,17 @@ export default {
       visible: true
     })
 
+    let quan = layout['game-card']['游泳圈.png']
+    if (this.questions.length < 4) {
+      quan = layout['game-card1']['游泳圈1.png']
+    } else if (this.questions.length === 4) {
+      quan = layout['game-card2']['游泳圈2.png']
+    }
     const panel = new Panel({
       x: 0,
       y: 0,
       questions: this.questions,
-      backgroundPos: layout['game-card']['游泳圈.png'],
+      backgroundPos: quan,
       visible: true
     })
 

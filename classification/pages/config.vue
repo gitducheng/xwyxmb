@@ -51,8 +51,6 @@
 <script>
 import defaultData from '@/static/defaultData'
 import InitGame from "~/assets/game"
-import GHeader from "../components/GHeader"
-import GFooter from "../components/GFooter"
 
 function resize () {
   var w = document.body.clientWidth
@@ -92,10 +90,6 @@ export default {
       this.title = data.title
       this.tableData = data.data
      }
-  },
-  components: {
-    GHeader,
-    GFooter
   },
   methods: {
     focusName (data) {
@@ -273,7 +267,10 @@ html {
       }
     }
 
-    .el-table .el-input {
+    .el-table_1_column_1   .el-input {
+      width: 150px;
+    }
+    .el-table_1_column_2   .el-input {
       width: 200px;
     }
   }

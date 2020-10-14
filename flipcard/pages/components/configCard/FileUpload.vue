@@ -58,8 +58,12 @@ export default {
       const that = this
       var file = this.files[0].file;
         //这里我们判断下类型如果不是图片就返回 去掉就可以上传任意文件
-      if (!/image\/\w+/.test(file.type)) {
-        alert("请确保文件为图像类型")
+      if (['image/jpg','image/png','image/jpeg'].indexOf(file.type) < 0) {
+        this.$message({type: 'warning',message:"只支持.png和.jpg格式的图片哦"})
+        return false
+      }
+      if(file.size>1024*1024){
+        this.$message({type: 'warning',message:"请上传1M以内的图片"})
         return false
       }
       var reader = new FileReader()

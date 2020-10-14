@@ -1,0 +1,92 @@
+{
+  "background": {
+    "id": "background",
+    "src": "/img/background.jpg",
+    "rect": [
+      0,
+      0,
+      1920,
+      1080
+    ]
+  },
+  "submit": {
+    "id": "submit",
+    "src": "/img/submit.png",
+    "rect": [
+      0,
+      0,
+      318,
+      92
+    ]
+  },
+  "restart": {
+    "id": "restart",
+    "src": "/img/restart.png",
+    "rect": [
+      0,
+      0,
+      318,
+      92
+    ]
+  },
+  "question": {
+    "id": "question",
+    "src": "/img/question.png",
+    "rect": [
+      0,
+      0,
+      181,
+      58
+    ]
+  },
+  "result": {
+    "id": "result",
+    "src": "/img/result.png",
+    "rect": [
+      0,
+      0,
+      181,
+      58
+    ]
+  },
+  "wrong": {
+    "id": "wrong",
+    "src": "/img/wrong.png",
+    "rect": [
+      0,
+      0,
+      1920,
+      1080
+    ]
+  },
+  "right": {
+    "id": "right",
+    "src": "/img/right.png",
+    "rect": [
+      0,
+      0,
+      1920,
+      1080
+    ]
+  },
+  "arrow-down": {
+    "id": "arrow-down",
+    "src": "/img/arrow-down.png",
+    "rect": [
+      0,
+      0,
+      64,
+      64
+    ]
+  },
+  "arrow-up": {
+    "id": "arrow-up",
+    "src": "/img/arrow-up.png",
+    "rect": [
+      0,
+      0,
+      64,
+      64
+    ]
+  }
+}

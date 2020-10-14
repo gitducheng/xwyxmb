@@ -53,6 +53,7 @@ export default function() {
 
     onComplete: function(e) {
       const spsource = this.rawSource
+      // debugger
       spsource.rawUrls.forEach((item) => {
         const objpath = item.rawUrl.split('/')
         const name = objpath.pop()

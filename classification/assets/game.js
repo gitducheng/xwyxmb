@@ -87,7 +87,13 @@ export default class InitGame {
             stage.resize(width, height, true)
         }
 
-        function touchHandler(event) {
+        if (Hilo.event.POINTER_START == "touchstart") {
+            stage.enableDOMEvent('mousedown', true)
+            stage.enableDOMEvent('mousemove', true)
+            stage.enableDOMEvent('mouseup', true)
+        }
+
+        function touchHandler (event) {
             var touches = event.changedTouches,
                 first = touches[0],
                 type = "";
@@ -113,12 +119,12 @@ export default class InitGame {
             simulatedEvent.initMouseEvent(type, true, true, window, 1,
                 first.screenX, first.screenY,
                 first.clientX, first.clientY, false,
-                false, false, false, 0 /*left*/ , null);
+                false, false, false, 0 /*left*/, null);
 
             first.target.dispatchEvent(simulatedEvent);
         }
 
-        function init() {
+        function init () {
             console.log('convert touch to mouse');
             document.addEventListener("touchstart", touchHandler, true);
             document.addEventListener("touchmove", touchHandler, true);
@@ -249,6 +255,7 @@ export default class InitGame {
             subClassList.push(container)
 
             // 拖动事件
+
             container.on(Hilo.event.POINTER_MOVE, e => {
                 this.classNameList.forEach((name, nameIndex) => {
                     if (name.hitTestObject(container)) {
@@ -263,6 +270,7 @@ export default class InitGame {
                     }
                 })
             })
+
 
             container.on(Hilo.event.POINTER_END, e => {
                 let isRight = false

@@ -1,0 +1,22 @@
+{
+  "background": {
+    "id": "background",
+    "src": "./img/bg-start.jpg",
+    "rect": [
+      0,
+      0,
+      1920,
+      1080
+    ]
+  },
+  "start": {
+    "id": "start",
+    "src": "./img/start.png",
+    "rect": [
+      820,
+      864,
+      318,
+      88
+    ]
+  }
+}

@@ -1,5 +1,7 @@
 import Hilo from 'hilojs'
 import Card from './card'
+import Card1 from './card1'
+import Card2 from './card2'
 
 export default class Main extends Hilo.Container {
   constructor (properties) {
@@ -29,17 +31,29 @@ export default class Main extends Hilo.Container {
       backgroundPos,
     }
 
+    let currentCard = Card
+    let cardWidth = 306+42
+    if (this.questions.length < 4) {
+      currentCard = Card1
+      cardWidth = 485+42
+      this.height=489
+    } else if (this.questions.length === 4) {
+      currentCard = Card2
+      cardWidth = 375+42
+      this.height=390
+    }
+
     for (let i = 0; i < this.questions.length; i++) {
       if (i <= 3) {
         row1.questions = this.questions[i]
-        new Card(row1).addTo(this)
-        row1.x += 348
-        this.width += 348
+        new currentCard(row1).addTo(this)
+        row1.x += cardWidth
+        this.width += cardWidth
       } else {
         row2.questions = this.questions[i]
-        new Card(row2).addTo(this)
-        row2.x += 348
-        this.height = 326 * 2
+        new currentCard(row2).addTo(this)
+        row2.x += cardWidth
+        this.height = cardWidth * 2
       }
     }
   }

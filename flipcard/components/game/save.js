@@ -35,18 +35,27 @@ export default async function init(configData) {
     visible: true
   })
 
+  let quan = layout['game-card']['游泳圈.png']
+    if (configData.data.length < 4) {
+      quan = layout['game-card1']['游泳圈1.png']
+    } else if (configData.data.length === 4) {
+      quan = layout['game-card2']['游泳圈2.png']
+    }
   const panel = new Panel({
     x: 0,
     y: 0,
     questions: [...configData.data],
-    backgroundPos: layout['game-card']['游泳圈.png'],
+    backgroundPos: quan,
     visible: true
   })
 
   stage.addChild(exportScence, title, panel)
   return new Promise((re) => {
     ticker.nextTick(() => {
-      re(stage.canvas.toDataURL('image/png'))
+      // re(stage.canvas.toDataURL('image/png'))
+       setTimeout(() => {
+         re(stage.canvas.toDataURL('image/png'))
+       }, 500)
     })
   })
 }

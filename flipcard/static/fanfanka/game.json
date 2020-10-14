@@ -68,6 +68,52 @@
         "height": 318,
         "name": "游泳圈.png"
       }
+    ],
+    "game-card1": [
+      {
+        "category": "game-card1",
+        "css": {
+          "backgroundSize": "485px 489px",
+          "backgroundPositionX": "0vw",
+          "backgroundPositionY": "0vw",
+          "width": "485px",
+          "height": "489px"
+        },
+        "imageName": "a15b9fee-c25f-46d8-8c9d-7c27b6217627",
+        "rawUrl": "game/card1/游泳圈1.png",
+        "rect": [
+          0,
+          0,
+          485,
+          489
+        ],
+        "width": 485,
+        "height": 489,
+        "name": "游泳圈1.png"
+      }
+    ],
+    "game-card2": [
+      {
+        "category": "game-card2",
+        "css": {
+          "backgroundSize": "375px 390px",
+          "backgroundPositionX": "0vw",
+          "backgroundPositionY": "0vw",
+          "width": "375px",
+          "height": "390px"
+        },
+        "imageName": "a15b9fee-c25f-46d8-8c9d-7c27b6217627",
+        "rawUrl": "game/card2/游泳圈2.png",
+        "rect": [
+          0,
+          0,
+          375,
+          390
+        ],
+        "width": 375,
+        "height": 390,
+        "name": "游泳圈2.png"
+      }
     ]
 	},
 	"rawUrls": [
@@ -80,6 +126,14 @@
       "rawUrl": "game/card/游泳圈.png"
     },
     {
+      "imageName": "quan1",
+      "rawUrl": "game/card1/游泳圈1.png"
+    },
+    {
+      "imageName": "quan2",
+      "rawUrl": "game/card2/游泳圈2.png"
+    },
+    {
       "imageName": "710d5c9b-f830-4f49-999f-9e962a3862e5",
       "rawUrl": "game/title/游戏标题.png"
     }
@@ -87,6 +141,8 @@
 	"imageIds": [
     "c43ff35a-9d4d-4f4a-af09-c1188c6618e4",
     "a15b9fee-c25f-46d8-8c9d-7c27b6217627",
+    "quan1",
+    "quan2",
     "710d5c9b-f830-4f49-999f-9e962a3862e5"
 	]
 }
