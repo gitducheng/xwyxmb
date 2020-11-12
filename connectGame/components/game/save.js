@@ -4,7 +4,7 @@ import ExportScence from '~/components/game/exportScence'
 import SubmitButton from '~/components/game/submitButton'
 import PanelImage from '~/components/game/panelImage'
 
-export default async function init (questions) {
+export default async function init(questions) {
   // const  // 接入hilo动画引擎
   const Assets = AssetsFectory(questions)
 
@@ -18,11 +18,20 @@ export default async function init (questions) {
 
   const { bg, titleBg } = assets
 
+  // 打乱左侧题目顺序
+  var randomQuestions = questions
+  for (var i = randomQuestions.left.length - 1; i >= 0; i--) {
+    var randomIndex = Math.floor(Math.random() * (i + 1))
+    var itemAtIndex = randomQuestions.left[randomIndex]
+    randomQuestions.left[randomIndex] = randomQuestions.left[i]
+    randomQuestions.left[i] = itemAtIndex
+  }
+
   // 准备场景
   const exportScence = new ExportScence({
     x: 0,
     y: 0,
-    questions,
+    randomQuestions,
     images: { bg, titleBg },
     title: questions.title,
   })
@@ -37,21 +46,37 @@ export default async function init (questions) {
   })
 
   // 题目
-  const { questionLeft, questionRight, errorLine, rightLine, questionsImage, errorIcon, tipsLine } = assets
+  const {
+    questionLeft,
+    questionRight,
+    errorLine,
+    rightLine,
+    questionsImage,
+    errorIcon,
+    tipsLine,
+  } = assets
   // 插入题目 两个板块之间的距离 300 每个背景板的长度 499 106
   const panel = new PanelImage({
     // x: (1920 - 499 * 2 - 300) / 2,
     // y: 320 - (this.questions.left.length * 10),
     x: 0,
     y: 0,
-    images: { questionLeft, questionRight, errorLine, rightLine, questionsImage, errorIcon, tipsLine },
-    questions: questions,
+    images: {
+      questionLeft,
+      questionRight,
+      errorLine,
+      rightLine,
+      questionsImage,
+      errorIcon,
+      tipsLine,
+    },
+    questions: randomQuestions,
     answerQuestionsIds: [],
     answerRealIds: [],
     resultIds: [],
     type: 'panel',
     stage: stage,
-    submitBtn: subBtn
+    submitBtn: subBtn,
   })
 
   stage.addChild(exportScence)
@@ -65,4 +90,3 @@ export default async function init (questions) {
     })
   })
 }
-

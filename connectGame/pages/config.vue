@@ -268,10 +268,12 @@
         }
 
         this[this.questionsType].type = this.isText ? 'text' : 'image'
-
+        for(let i = 0; i < this[this.questionsType].right.length; i++) {
+          this[this.questionsType].right[i].id = i
+          this[this.questionsType].left[i].id = i
+        }
         let setQuestion = this[this.questionsType]
         setQuestion.title = this.title
-
         try {
           this.isWaiting = true
           const thumbnail = await save(setQuestion)
