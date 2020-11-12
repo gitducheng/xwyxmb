@@ -22,7 +22,7 @@
         @blur="showZhengFileUpload = 'blur'"
       ></el-input>
       <FileUpload
-        v-if="showZhengFileUpload"
+        v-if="showZhengFileUpload && !cardData.zhengText"
         class="use-img-btn"
         :name="zhengUuid"
         :accept="accept"
@@ -49,7 +49,7 @@
         @blur="showFanFileUpload = 'blur'"
       ></el-input>
       <FileUpload
-        v-if="showFanFileUpload"
+        v-if="showFanFileUpload && !cardData.fanText"
         class="use-img-btn"
         :name="fanUuid"
         :accept="accept"
