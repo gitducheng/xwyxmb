@@ -35,7 +35,7 @@
 
         <span class="root__add"
               @click="addQuestion">
-          +添加填空({{questions.content.length}}/{{target}})
+          +添加填空({{questions.content?questions.content.length:"0"}}/{{target}})
         </span>
 
         <span class="root__submit"

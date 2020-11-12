@@ -125,7 +125,13 @@
 
           this.setAnswer = this.questionsPanelCanvas.setAnswer
 
-          this.answerError = this.questionsPanelCanvas.setAnswer.filter((item, index) => item.questionId !== this.rightAnser[index])
+          const questionTexts = this.questionsPanelCanvas.questions
+          this.answerError = this.questionsPanelCanvas.setAnswer.filter((item, index) => {
+            if(questionTexts[index] === item.text){
+              return true
+            }
+            item.questionId !== this.rightAnser[index]
+          })
 
           this.isAllRight = !this.answerError.length
 
