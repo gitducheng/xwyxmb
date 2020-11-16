@@ -127,11 +127,21 @@
 
           const questionTexts = this.questionsPanelCanvas.questions
           this.answerError = this.questionsPanelCanvas.setAnswer.filter((item, index) => {
-            if(questionTexts[index] === item.text){
-              return true
+            let answerText,rightText
+            for(let i = 0;i<questionTexts.length;i++) {
+              if(questionTexts[i].id == item.questionId){
+                answerText = questionTexts[i].text;
+              }
+              if(questionTexts[i].id == this.rightAnser[index]) {
+                rightText = questionTexts[i].text;
+              }
             }
-            item.questionId !== this.rightAnser[index]
+            if(answerText == rightText) {
+              return false
+            }
+            return item.questionId !== this.rightAnser[index]
           })
+          console.log(this.questionsPanelCanvas, this.rightAnser)
 
           this.isAllRight = !this.answerError.length
 

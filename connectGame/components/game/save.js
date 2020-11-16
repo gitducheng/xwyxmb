@@ -18,20 +18,11 @@ export default async function init(questions) {
 
   const { bg, titleBg } = assets
 
-  // 打乱左侧题目顺序
-  var randomQuestions = questions
-  for (var i = randomQuestions.left.length - 1; i >= 0; i--) {
-    var randomIndex = Math.floor(Math.random() * (i + 1))
-    var itemAtIndex = randomQuestions.left[randomIndex]
-    randomQuestions.left[randomIndex] = randomQuestions.left[i]
-    randomQuestions.left[i] = itemAtIndex
-  }
-
   // 准备场景
   const exportScence = new ExportScence({
     x: 0,
     y: 0,
-    randomQuestions,
+    questions,
     images: { bg, titleBg },
     title: questions.title,
   })
@@ -70,7 +61,7 @@ export default async function init(questions) {
       errorIcon,
       tipsLine,
     },
-    questions: randomQuestions,
+    questions: questions,
     answerQuestionsIds: [],
     answerRealIds: [],
     resultIds: [],

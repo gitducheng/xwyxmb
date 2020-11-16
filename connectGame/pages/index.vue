@@ -55,7 +55,11 @@
 
       this.questions = JSON.parse(questions)
 
+      this.shuffle(this.questions.left)
       this.shuffle(this.questions.right)
+      this.questions.left.forEach((item, index) => {
+        this.resultIds[index] = [index, this.questions.right.findIndex(i => i.id === item.id)]
+      })
 
       // 预加载图片
       const Assets = AssetsFectory(this.questions)
@@ -204,7 +208,12 @@
         this.questionsSubmitCanvas.visible = true
 
         // 重置基础信息
+        this.shuffle(this.questions.left)
         this.shuffle(this.questions.right)
+        this.questions.left.forEach((item, index) => {
+          this.resultIds[index] = [index, this.questions.right.findIndex(i => i.id === item.id)]
+        })
+
         this.answerQuestionsIds = []
         this.answerRealIds = []
 
@@ -223,12 +232,12 @@
           arr[randomIndex] = arr[i];
           arr[i] = itemAtIndex;
         }
+        return arr
+        // this.questions.right = arr
 
-        this.questions.right = arr
-
-        this.questions.left.forEach((item, index) => {
-          this.resultIds[index] = [item.id, this.questions.right.findIndex(i => i.id === item.id)]
-        })
+        // this.questions.left.forEach((item, index) => {
+        //   this.resultIds[index] = [item.id, this.questions.right.findIndex(i => i.id === item.id)]
+        // })
       },
     }
   }

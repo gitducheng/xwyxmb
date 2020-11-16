@@ -240,8 +240,10 @@ export default {
           mixedList: this.mixedList,
           duration: this.duration,
           difficulty: this.difficulty,
-        }).then(() => {
-          this.$router.push({ name: 'Home' })
+        }).then((data) => {
+          if (data === "success") {
+            this.$router.push({ name: 'Home' })
+          }
         }, (err) => {
           this.error(err.toString())
         })
