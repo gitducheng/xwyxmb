@@ -217,12 +217,15 @@ export default {
       // 接口
       try {
         const thumbnail = await this.getGameImg(datas);
-        await this.$testsave(thumbnail, JSON.stringify(datas));
+        const saveResponse = await this.$testsave(thumbnail, JSON.stringify(datas));
+        if (saveResponse === "success") {
+          this.$router.replace("/");
+        }
       } catch (error) {
         console.log(error);
         localStorage.setItem("sortingData", JSON.stringify(datas));
+        this.$router.replace("/");
       }
-      this.$router.replace("/");
     },
     addDefaultData() {
       this.title = defaultData.title;

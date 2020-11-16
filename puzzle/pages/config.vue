@@ -213,14 +213,17 @@ export default {
       try {
         this.isWaiting = true
         const thumbnail = await this.getGameImg({...datas,list:imgList})
-        await this.$testsave(thumbnail, JSON.stringify(datas))
+        const saveResponse = await this.$testsave(thumbnail, JSON.stringify(datas))
+        if (saveResponse === "success") {
+          this.$router.replace("/");
+        }
       } catch (error) {
         console.log(error)
         const localData = { ...datas, img: this.img }
         localStorage.setItem('puzzleData', JSON.stringify(localData))
+        this.$router.replace('/')
       }
       this.isWaiting = false
-      this.$router.replace('/')
     },
     async getGameImg (datas) {
       const configData = JSON.parse(JSON.stringify(datas))

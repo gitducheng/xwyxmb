@@ -787,14 +787,17 @@ export default {
               try {
                 localStorage.setItem('bannerData', JSON.stringify(this.bannerData))
                 localStorage.setItem('tableData', JSON.stringify(this.tableData))
-                this.$testsave(this.htmlImgUrl, JSON.stringify(this.allData))
+                const saveResponse = this.$testsave(this.htmlImgUrl, JSON.stringify(this.allData))
+                if (saveResponse === "success") {
+                  this.$router.replace("/");
+                }
               } catch (error) {
                 // console.log(this.bannerData)
                 localStorage.setItem('bannerData', JSON.stringify(this.bannerData))
                 localStorage.setItem('tableData', JSON.stringify(this.tableData))
-              }
+                this.$router.replace('/')
+             }
               loading.close();
-              this.$router.replace('/')
             },this.seconds)
           }
         }

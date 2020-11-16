@@ -151,13 +151,16 @@ export default {
       try {
         this.isWaiting = true
         const thumbnail = await this.getGameImg(datas)
-        await this.$testsave(thumbnail, JSON.stringify(datas))
+        const saveResponse = await this.$testsave(thumbnail, JSON.stringify(datas))
+        if (saveResponse === "success") {
+          this.$router.replace("/");
+        }
       } catch (error) {
         console.log(error)
         localStorage.setItem('classificationData', JSON.stringify(datas))
+        this.$router.replace("/");
       }
       this.isWaiting = false
-      this.$router.replace('/')
     },
     addDefaultData () {
       this.title = defaultData.title

@@ -192,12 +192,15 @@ export default {
       } else {
         try {
           const thumbnail = await save(this.configData.second)
-          await this.$testsave(thumbnail, JSON.stringify(this.configData))
+          const saveResponse = await this.$testsave(thumbnail, JSON.stringify(this.configData))
+          if (saveResponse === "success") {
+            this.$router.replace("/");
+          }
         } catch (error) {
           console.log(error)
           localStorage.setItem('configData', JSON.stringify(this.configData))
+          this.$router.replace('/')
         }
-        this.$router.replace('/')
       }
     },
 

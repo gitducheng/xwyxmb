@@ -157,12 +157,15 @@
         try {
           this.isWaiting = true
           const thumbnail = await save(setQuestion)
-          await this.$testsave(thumbnail, JSON.stringify(setQuestion))
+          const saveResponse = await this.$testsave(thumbnail, JSON.stringify(setQuestion))
+          if (saveResponse === "success") {
+            this.$router.replace("/");
+          }
         } catch (error) {
           localStorage.setItem('questionsConfig', JSON.stringify(setQuestion))
+          this.$router.replace('/')
         }
         this.isWaiting = false
-        this.$router.replace('/')
       },
       changeHandelInput (number, nextNumber) {
         let allInput = document.querySelectorAll('.root__question input')

@@ -144,11 +144,14 @@ export default{
       }
       try {
         const thumbnail = await save(configData)
-        await this.$testsave(thumbnail, JSON.stringify(configData))
+        const saveResponse = await this.$testsave(thumbnail, JSON.stringify(configData))
+        if (saveResponse === "success") {
+          this.$router.replace("/");
+        }
       } catch (error) {
         localStorage.setItem('configData', JSON.stringify(configData))
+        this.$router.replace('/')
       }
-      this.$router.replace('/')
     }, 800),
   },
 }
