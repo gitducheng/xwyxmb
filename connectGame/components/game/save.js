@@ -18,6 +18,10 @@ export default async function init(questions) {
 
   const { bg, titleBg } = assets
 
+  shuffle(questions.left)
+  shuffle(questions.right)
+  console.log(questions)
+
   // 准备场景
   const exportScence = new ExportScence({
     x: 0,
@@ -80,4 +84,14 @@ export default async function init(questions) {
       }, 500)
     })
   })
+}
+
+function shuffle(arr) {
+  for (var i = arr.length - 1; i >= 0; i--) {
+    var randomIndex = Math.floor(Math.random() * (i + 1))
+    var itemAtIndex = arr[randomIndex]
+    arr[randomIndex] = arr[i]
+    arr[i] = itemAtIndex
+  }
+  return arr
 }
